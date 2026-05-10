@@ -1,3 +1,3 @@
 Please write the transcript of this chat to a file in the repo here:
-C:\Users\pdr0663\PDR-16_AT\docs\logs
+\docs\logs
 and show me some commit text here in the chat.
