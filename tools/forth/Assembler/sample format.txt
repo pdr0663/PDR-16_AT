@@ -1,0 +1,19 @@
+              0000  0009 1234                                ; branch 'BOOT               
+
+                                                             ; DUMP (b u --)
+              0b7b  0b63                                     ; link
+              0b7c  0004                                     ; len('DUMP')
+              0b7d  0044 0055 004d 0050                      ; 'DUMP'
+DUMP:         0b81  0005                                     ; doLIST
+              0b82  ff00 0075 00a1 048c 0025 0010 026c       ; BASE @ >R HEX doLIT 16 /
+              0b89  09b7 05d6 0025 0010 014c 0b68 0135 0135  ; FOR CR doLIT 16 2DUP dm+ ROT ROT doLIT 2 SPACES _TYPE NUF? NOT WHILE
+                    0025 0002 05bb 0b55 057e 015c 0a4c       ;
+              0b98  09ce 0a31 0095 00b7 0a19 00b7 0095 ff00  ; NEXT ELSE R> DROP THEN DROP R> BASE ! EXIT
+                    0025 0002 05bb 0b55 057e 015c 0a4c       ;
+
+                                                             ; NOP ( -- )
+              0002  0000                                     ; link
+              0003  0003                                     ; len('NOP')
+              0004  004e 004f 0050                           ; 'NOP'
+NOP:          0007  0000                                     ; NOP
+              0008  0007                                     ; next

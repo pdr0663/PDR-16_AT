@@ -1,0 +1,237 @@
+word_name	stack_effect	description
+NOP	( -- )	Primitive opcode
+jump	( -- )	Primitive opcode
+?rx	( -- c T | F)	Primitive opcode
+tx!	( c -- )	Primitive opcode
+doLIT	( -- w )	Primitive opcode
+doLIST	( a -- )	Primitive opcode
+doVAR	( -- a )	Primitive opcode
+next		Primitive opcode
+?branch	( f -- )	Primitive opcode
+branch	( -- )	Primitive opcode
+EXECUTE	( xt -- )	Primitive opcode
+EXIT		Primitive opcode
+!	( w a -- )	Primitive opcode
+@	( a -- w )	Primitive opcode
+C!	( c b -- )	Primitive opcode
+C@	( b -- c )	Primitive opcode
+RP!	( a -- )	Primitive opcode
+RP@	( -- a )	Primitive opcode
+R>	( -- w )	Primitive opcode
+R@	( -- w )	Primitive opcode
+>R	( w -- )	Primitive opcode
+SP@	( -- a )	Primitive opcode
+SP!	( a -- )	Primitive opcode
+DROP	( w -- )	Primitive opcode
+DUP	( w -- w w)	Primitive opcode
+SWAP	( w1 w2 -- w2 w1 )	Primitive opcode
+OVER	( w1 w2 -- w1 w2 w1 )	Primitive opcode
+0<	( n -- f )	Primitive opcode
+AND	( w w -- w )	Primitive opcode
+OR	( w w -- w )	Primitive opcode
+XOR	( w w -- w )	Primitive opcode
+UM+	( w w -- w cy )	Primitive opcode
+SP0	(-- a)	Pointer to bottom of the data stack.
+RP0	(-- a)	Pointer to bottom of the return stack.
+'?KEY	(-- a)	Execution vector of ?KEY.
+'EMIT	(-- a)	Execution vector of EMIT.
+'EXPECT	(-- a)	Execution vector of EXPECT.
+'TAP	(-- a)	Execution vector of TAP.
+'ECHO	(-- a)	Execution vector of ECHO.
+'PROMPT	(-- a)	Execution vector of PROMPT.
+'BOOT	(-- a)	Execution vector of BOOT.
+'FIND	(-- a)	Execution vector of FIND.
+BASE	(-- a)	Storage of the radix base for numeric I/O.
+tmp	(-- a)	A temporary storage location used in parse and find. [compile-only]
+SPAN	(-- a)	Hold character count received by EXPECT.
+>IN	(-- a)	Hold the character pointer while parsing input stream.
+#TIB	(-- a)	Hold the current count and address of the terminal input buffer.
+CSP	(-- a)	Hold the stack pointer for error checking.
+'EVAL	(-- a)	Execution vector of EVAL.
+'NUMBER	(-- a)	Execution vector of NUMBER?.
+HLD	(-- a)	Hold a pointer in building a numeric output string.
+HANDLER	(-- a)	Hold the return stack pointer for error handling.
+FORTHVOC	(-- a)	Writable FORTH vocabulary record.
+CONTEXT	(-- a)	A area to specify vocabulary search order.
+CURRENT	(-- a)	Point to the vocabulary to be extended.
+CP	(-- a)	Runtime dictionary allocation pointer (HERE).
+TOKBUF	(-- a)	Point to the token scratch buffer.
+LAST	(-- a)	Point to the last dictionary header.
+FIND_TOKEN		
+FIND_CHAR		
+UP	( -- a, Pointer to the user area.)	
+doUSER	( -- a )	[compile-only]
+doVOC	( -- )	[compile-only]
+FORTH	( -- )	
+?DUP	( w -- w w | 0 )	
+ROT	( w1 w2 w3 -- w2 w3 w1 )	
+2DROP	( w w  -- )	
+2DUP	( w1 w2 -- w1 w2 w1 w2 )	
++	( w w -- w )	
+NOT	( w -- w )	
+NEGATE	( n -- -n )	
+DNEGATE	( d -- -d )	
+D+	( d d -- d )	
+-	( w w -- w )	
+ABS	( n -- +n )	
+=	( w w -- t )	
+U<	( u u -- t )	
+<	( n n -- t )	
+MAX	( n n -- n )	
+MIN	( n n -- n )	
+WITHIN	( u ul uh -- t )	
+UM/MOD	( ud u -- ur uq )	
+M/MOD	( d n -- r q )	floored division
+/MOD	( n n -- r q )	
+MOD	( n n -- r )	
+/	( n n -- q )	
+UM*	( u u -- ud )	
+*	( n n -- n )	
+M*	( n n -- d )	
+*/MOD	( n n n -- r q )	
+*/	( n n n -- q )	
+CELL-	(a -- a)	
+CELL+	(a -- a)	
+CELLS	(n -- n)	
+ALIGNED	(b -- a)	
+BL	(-- 32)	
+>CHAR	(c -- c)	
+DEPTH	(-- n)	
+PICK	(+n -- w)	
++!	(n a --)	
+2!	(d a --)	
+2@	(a -- d)	
+COUNT	(b -- b +n)	
+HERE	(-- a)	
+PAD	(-- a)	
+TIB	(-- a)	
+@EXECUTE	(a --)	
+CMOVE	(b b u --)	
+FILL	(b u c --)	
+-TRAILING	(b u -- b u)	
+PACK$	(b u a -- a)	
+DIGIT	(u -- c)	
+EXTRACT	(n base -- n c)	
+<#	(--)	
+HOLD	(c --)	
+#	(u -- u)	
+#S	(u -- 0)	
+SIGN	(n --)	
+#>	(w -- b u)	
+str	(n -- b u)	
+HEX	(--)	
+DECIMAL	(--)	
+.R	(n +n --)	
+U.R	(u +n --)	
+U.	(u --)	
+.	(w --)	
+?	(a --)	
+DIGIT?	(c base -- u t)	
+NUMBER?	(a -- n T | a F)	
+?KEY	(-- c T | F)	
+KEY	(-- c)	
+EMIT	(c --)	
+NUF?	(-- f)	
+PACE	(--)	
+SPACE	(--)	
+CHARS	(+n c --)	
+SPACES	(+n --)	
+TYPE	(b u --)	
+CR	(--)	
+do$	(-- a)	[compile-only]
+$"|	(-- a)	[compile-only]
+."|	(--)	[compile-only]
+parse	(b u c -- b u delta ; <string>)	
+PARSE	(c -- b u ; <string>)	
+.(	(--)	[immediate]
+(	(--)	[immediate]
+\\	(--)	[immediate]
+CHAR	(-- c)	
+TOKEN	(-- a ; <string>)	
+WORD	(c -- a ; <string>)	
+NAME>	(na -- xt)	
+SAME?	(a a u -- a a f \\ -0+)	
+MATCH?	(a a u -- t)	
+find	(a va -- xt na | a F)	[compile-only]
+NAME?	(a -- xt na | a F)	[compile-only]
+^H	(b b b -- b b b)	
+TAP	(bot eot cur c -- bot eot cur)	
+kTAP	(bot eot cur c -- bot eot cur)	
+accept	(b u -- b u)	
+EXPECT	(b u --)	
+QUERY	(--)	
+CATCH	(ca -- err#/0)	
+THROW	(err# -- err#)	
+?NUMHEAD	(a -- a f)	[compile-only]
+$INTERPRET	(a --)	
+.OK	(--)	
+?STACK	(--)	
+EVAL	(--)	
+PRESET	(--)	
+xio	(a a a --)	[compile-only]
+FILE	(--)	
+HAND	(--)	
+NULL$	( -- a )	Return address of a null string with zero count.
+CONSOLE	(--)	
+QUIT	(--)	
+[	(--)	[immediate]
+]	(--)	
+'	(-- xt)	
+ALLOT	(n --)	
+,	(w --)	
+[COMPILE]	(-- ; <string>)	[immediate]
+COMPILE	(--)	[compile-only]
+LITERAL	(w --)	[immediate]
+$,"	(--)	
+RECURSE	(--)	[immediate]
+FOR	( -- a )	Start a FOR-NEXT loop structure in a colon definition. [immediate]
+BEGIN	( -- a )	Start an infinite or indefinite loop structure. [immediate]
+NEXT	( a -- )	Terminate a FOR-NEXT loop structure. [immediate]
+UNTIL	( a -- )	Terminate a BEGIN-UNTIL indefinite loop structure. [immediate]
+AGAIN	( a -- )	Terminate a BEGIN-AGAIN infinite loop structure. [immediate]
+IF	( -- A )	Begin a conditional branch structure. [immediate]
+AHEAD	( -- A )	Compile a forward branch instruction. [immediate]
+REPEAT	( A a -- )	Terminate a BEGIN-WHILE-REPEAT indefinite loop. [immediate]
+THEN	( A -- )	Terminate a conditional branch structure. [immediate]
+AFT	( a -- a A )	Jump to THEN in a FOR-AFT-THEN-NEXT loop the first time through. [immediate]
+ELSE	( A -- A )	Start the false clause in an IF-ELSE-THEN structure. [immediate]
+WHILE	( a -- A a )	Conditional branch out of a BEGIN-WHILE-REPEAT loop. [immediate]
+ABORT"	(-- ; <string>)	Conditional abort with an error message. [immediate]
+abort"	( f -- )	Run time routine of ABORT" . Abort with a message. [compile-only]
+$"	(-- ; <string>)	Compile an inline string literal. [immediate]
+."	(-- ; <string>)	Compile an inline string literal to be typed out at run time. [immediate]
+F"	(-- ; <string>)	Compile an inline formatted string literal. [immediate]
+?UNIQUE	(a -- a)	Display a warning message if the word already exists.
+HEADER	(na --)	Build a conventional inline dictionary header using the string at na. [compile-only]
+PRIM?	(a -- opcode operands t | a f)	[compile-only]
+CODE-ARG	(-- x ; <string>)	[compile-only]
+$COMPILE	(a --)	Compile next word to code dictionary as a token or literal. [compile-only]
+$CODE	(a --)	Compile next word to code dictionary as a primitive opcode. [compile-only]
+REVEAL	(--)	Reveal the last built word by linking it into the current vocabulary. [compile-only]
+;	(--)	Terminate a colon definition. [compile-only, immediate]
+:	(-- ; <string>)	Start a new colon definition using next word as its name.
+]CODE	(--)	Switch the compiler to CODE mode. [compile-only]
+CODE	(-- ; <string>)	Start a new CODE definition using next word as its name.
+END-CODE	(--)	Terminate a CODE definition. [compile-only, immediate]
+IMMEDIATE	(--)	Make the last compiled word an immediate word. [immediate]
+COMPILE-ONLY	(--)	
+USER	(n -- ; <string>)	Compile a new user variable.
+CREATE	(-- ; <string>)	Compile a new array entry without allocating code space.
+VARIABLE	(-- ; <string>)	Compile a new variable initialized to 0.
+_TYPE	(b u --)	Display a string. Filter non-printing characters.
+dm+	(b u -- b)	Dump u bytes from , leaving a+u on the stack.
+DUMP	(b u --)	Dump u bytes from a, in a formatted manner.
+.S	(--)	Display the contents of the data stack.
+.BASE	(--)	
+.FREE	(--)	
+!CSP	(--)	Save stack pointer in CSP for error checking.
+?CSP	(--)	Abort if stack pointer differs from that saved in CSP.
+>NAME	(xt -- na | F)	Convert code address to a name address.
+.ID	(a --)	Display the name at address.
+SEE	(-- ; <string>)	A simple decompiler.
+WORDS	(--)	Display the names in the context vocabulary.
+VER	(-- u)	Return the version number of this implementation.
+hi	(--)	Display the sign-on message of eForth.
+EMPTY	(--)	
+MOVE		
+COLD	(--)	
