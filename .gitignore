@@ -1,0 +1,4 @@
+# Generated simulator transcripts and image-capture artifacts
+tools/sim/out/
+# Host-built simulator harnesses
+tools/sim/build/
