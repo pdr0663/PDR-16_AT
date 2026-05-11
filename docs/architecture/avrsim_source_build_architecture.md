@@ -1,98 +1,102 @@
 # avrsim Source Build Architecture
 
-This note describes the intended simulator build split for `PDR-16/AT`.
-The goal is to keep the runtime simulator separate from the source build
-pipeline, the same way the old Python-based Forth build kept image generation
-separate from the VM runtime.
+This note defines the two simulator workflows for `PDR-16/AT`.
 
-## Core idea
+1. Build the Forth system image from the Python seed plus Forth library source
+   files.
+2. Run the resulting binary under `avrsim.exe` for system testing and
+   development.
 
-`simavr` is a build-time dependency, not a permanent runtime dependency of this
-repo.
+The important split is that image generation and simulator runtime are separate
+steps. That matches the old Python-led Forth build model: Python is the source
+of truth for the image, and the simulator consumes the generated artifact.
 
-The preferred workflow is:
+## Workflow 1: Build The Forth Image
 
-1. build `simavr` on a Windows machine with MSYS2/UCRT64
-2. copy the resulting binaries and DLLs into the `avrsim/` folder in this repo
-3. run the simulator and Forth tooling from those copied artifacts
+The image build starts from the Python seed build in:
 
-That keeps the source tree portable while avoiding a full Windows toolchain on
-this machine.
+- `tools/image_builder/export_forth_rom_header.py`
 
-## Artifact folder
+That script rebuilds the copied Forth image and emits the generated ROM header:
 
-Use the `avrsim/` folder itself as the artifact drop location.
+- `firmware/mega/pdr_vm/generated/pdr16_at_forth_image.h`
 
-That folder is ignored by git for binary outputs, so it can stay in the repo
-without collecting build noise.
+It also refreshes the split ROM binaries under:
 
-## What belongs there
+- `tools/forth/Assembler/eForth_lo.bin`
+- `tools/forth/Assembler/eForth_hi.bin`
+
+This is the scenario for "build the Forth system from source".
+
+## Workflow 2: Run The Resulting Binary
+
+The simulator runtime is a separate Windows artifact:
+
+- `avrsim/avrsim.exe`
+
+That binary is built on a Windows machine and copied into this repo. It is used
+to run the generated Forth image for testing and development.
+
+The direct runtime launcher is:
+
+- `tools/sim/scripts/run_mega_vm_simavr.cmd`
+
+That launcher loads the preferred firmware artifact from:
+
+1. `firmware/mega/pdr_vm/.build-cli/pdr_vm.ino.elf`
+2. `firmware/mega/pdr_vm/.build-cli/pdr_vm.ino.hex`
+
+## Artifact Drop Location
+
+Use the `avrsim/` folder in this repo as the simulator artifact drop location.
+
+That folder holds copied Windows build outputs and is ignored for binary files.
 
 Typical contents are:
 
 - `avrsim.exe`
 - `libsimavr.a`
 - `libsimavrparts.a`
-- any DLLs required by the executable or helper tools
-- optional example binaries if you want them
+- any DLLs needed by the executable or helper tools
 
-The exact DLL set depends on what `ldd` reports on the build machine.
+## Windows Terminal
 
-## Build-time vs runtime responsibilities
+Use Tera Term for interactive serial access on Windows.
 
-### Build machine
+The Windows wrapper is:
+
+- `tools/sim/scripts/run_mega_vm_teraterm.cmd`
+
+It can connect to either:
+
+- `AVRSIM_COM`
+  - a COM port number such as `4` or `COM4`
+- `AVRSIM_PIPE`
+  - a named pipe such as `avrsim-uart0`
+
+## Responsibilities
 
 The build machine is responsible for:
 
-- compiling `simavr`
-- compiling the parts library
+- building `simavr`
 - gathering the runtime DLLs
-- producing a clean artifact bundle
-
-### This machine
+- copying `avrsim.exe` into `avrsim/`
 
 This machine is responsible for:
 
-- consuming the copied simulator binaries
-- running the Forth system
-- feeding Forth source files into the simulator
+- running `export_forth_rom_header.py` when the Forth image must be rebuilt
+- launching `avrsim.exe` for testing
+- using Tera Term for interactive serial work
 - processing post-compile binaries and manifests
 
-## Relationship to the old Python build
+## Tooling That Still Matters
 
-The old PDR-16 system had a Python-led image build pipeline:
+The current repo still keeps helper metadata because it remains useful for the
+two workflows:
 
-- Python was the source-of-truth builder
-- generated ROM/image artifacts were checked into the runtime build path
-- the VM consumed generated output rather than rebuilding itself at runtime
+- `tools/sim/mega_vm_manifest.py` records the memory map and capture contract.
+- `tools/sim/send_forth_file.py` is only relevant if we later revive an
+  automated serial feeder.
 
-The same split should apply here:
-
-- the simulator binary is an external build artifact
-- the Forth system and capture tools consume that artifact
-- the repo keeps the source of truth in scripts, manifests, and docs
-
-## Source build path
-
-The current build contract is:
-
-- Windows build machine uses MSYS2/UCRT64
-- simulator sources live in the build machine's own checkout
-- build result is copied into `avrsim/`
-- runtime scripts and docs refer to the copied binary, not to the build host
-
-## What still needs tooling
-
-The repo still needs a clean end-to-end source-fed simulation workflow for:
-
-- launching the simulator from copied artifacts
-- feeding Forth source files
-- capturing the resulting transcript
-- exporting or reconstructing the post-compile binary image
-
-That work should build on the simulator artifact folder instead of hard-coding
-WSL-only paths or Linux-specific temporary locations.
-
-On Windows, the interactive terminal should be Tera Term, connected either to
-the simulator's COM port or to a named pipe endpoint if the simulator exposes
-one.
+For now, the source-of-truth build path is the Python image builder, and the
+runtime path is the copied Windows `avrsim.exe` plus Tera Term.
