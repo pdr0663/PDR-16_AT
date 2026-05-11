@@ -449,43 +449,6 @@ static void prim_dec2(machine_state_t *vm) {
   vm_push(vm, (uint16_t)(value - 2u));
 }
 
-static void prim_MUL_SETUP(machine_state_t *vm) {
-  uint16_t multiplier = vm_pop(vm);
-  uint16_t multiplicand;
-  if (!vm->running && vm->fault != VM_FAULT_NONE) {
-    return;
-  }
-  multiplicand = vm_pop(vm);
-  if (!vm->running && vm->fault != VM_FAULT_NONE) {
-    return;
-  }
-  vm->mul_multiplicand = multiplicand;
-  vm->mul_multiplier = multiplier;
-  vm_push(vm, 0u);
-  vm_push(vm, 0u);
-}
-
-static void prim_MUL_STEP_ACC(machine_state_t *vm) {
-  uint16_t rlo = vm_pop(vm);
-  uint16_t rhi;
-  uint32_t acc;
-  if (!vm->running && vm->fault != VM_FAULT_NONE) {
-    return;
-  }
-  rhi = vm_pop(vm);
-  if (!vm->running && vm->fault != VM_FAULT_NONE) {
-    return;
-  }
-  acc = ((uint32_t)rhi << 16) | (uint32_t)rlo;
-  if ((vm->mul_multiplier & 0x0001u) != 0u) {
-    acc += vm->mul_multiplicand;
-  }
-  vm->mul_multiplicand = (uint16_t)(vm->mul_multiplicand << 1);
-  vm->mul_multiplier = (uint16_t)(vm->mul_multiplier >> 1);
-  vm_push(vm, (uint16_t)((acc >> 16) & 0xFFFFu));
-  vm_push(vm, (uint16_t)(acc & 0xFFFFu));
-}
-
 static void prim_NOT(machine_state_t *vm) {
   uint16_t value = vm_pop(vm);
   if (!vm->running && vm->fault != VM_FAULT_NONE) {
@@ -552,6 +515,25 @@ static void prim_2star(machine_state_t *vm) {
   vm_push(vm, (uint16_t)(value << 1));
 }
 
+static void prim_UMstar(machine_state_t *vm) {
+  uint16_t multiplier = vm_pop(vm);
+  uint16_t multiplicand;
+  uint32_t product;
+  if (!vm->running && vm->fault != VM_FAULT_NONE) {
+    return;
+  }
+  multiplicand = vm_pop(vm);
+  if (!vm->running && vm->fault != VM_FAULT_NONE) {
+    return;
+  }
+  product = (uint32_t)multiplicand * (uint32_t)multiplier;
+  vm_push(vm, (uint16_t)(product & 0xFFFFu));
+  if (!vm->running && vm->fault != VM_FAULT_NONE) {
+    return;
+  }
+  vm_push(vm, (uint16_t)((product >> 16) & 0xFFFFu));
+}
+
 static const primitive_fn_t primitive_table[64] = {
   prim_NOP,
   prim_jump,
@@ -604,8 +586,8 @@ static const primitive_fn_t primitive_table[64] = {
   prim_unimplemented,
   prim_unimplemented,
   prim_unimplemented,
-  prim_MUL_SETUP,
-  prim_MUL_STEP_ACC,
+  prim_UMstar,
+  prim_unimplemented,
   prim_NOT,
   prim_SUB,
   prim_NEGATE,
@@ -614,7 +596,6 @@ static const primitive_fn_t primitive_table[64] = {
   prim_ZERO,
   prim_Uplus,
   prim_2star,
-  prim_reserved,
   prim_reserved,
   prim_reserved
 };

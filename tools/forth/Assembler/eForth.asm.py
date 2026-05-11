@@ -483,15 +483,7 @@ dw(['EXIT'])
 colon('/MOD', ["OVER", "0<", "SWAP", "M/MOD", 'EXIT'], c='( n n -- r q )')
 colon('MOD', ["/MOD", "DROP", 'EXIT'], c='( n n -- r )')
 # Multiply
-colon('UM*', [
-    'MUL_SETUP',
-    'MUL_STEP_ACC', 'MUL_STEP_ACC', 'MUL_STEP_ACC', 'MUL_STEP_ACC',
-    'MUL_STEP_ACC', 'MUL_STEP_ACC', 'MUL_STEP_ACC', 'MUL_STEP_ACC',
-    'MUL_STEP_ACC', 'MUL_STEP_ACC', 'MUL_STEP_ACC', 'MUL_STEP_ACC',
-    'MUL_STEP_ACC', 'MUL_STEP_ACC', 'MUL_STEP_ACC', 'MUL_STEP_ACC',
-    'SWAP',
-    'EXIT',
-], c='( u u -- ud )')
+primitive('UM*', c='( u u -- ud )')
 
 colon('*', ['UM*', 'DROP', 'EXIT'], c='( n n -- n )')
 

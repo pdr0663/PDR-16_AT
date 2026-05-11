@@ -5836,3 +5836,436 @@ Loaded 236 bytes of Flash data at 0x116f0
 [bridge:uart->host] 
 [bridge:uart->host] 
 [bridge:uart->host] 
+[bridge] pipe=\\.\pipe\PDR16_AT_UART0
+[bridge] firmware=C:\Users\pdr0663\PDR-16_AT\tools\sim\scripts\..\..\..\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_AT_UART0
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:host->uart] B
+[bridge:uart->host] B
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 3
+[bridge:uart->host] 3
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] S
+[bridge:uart->host] S
+[bridge:host->uart] I
+[bridge:uart->host] I
+[bridge:host->uart] N
+[bridge:uart->host] N
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] 1
+[bridge:uart->host] 1
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] I
+[bridge:uart->host] I
+[bridge:host->uart] *
+[bridge:uart->host] *
+[bridge:host->uart] F
+[bridge:uart->host] F
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] .
+[bridge:uart->host] .
+[bridge:host->uart] 
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:host->uart] B
+[bridge:uart->host] B
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 3
+[bridge:uart->host] 3
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] S
+[bridge:uart->host] S
+[bridge:host->uart] I
+[bridge:uart->host] I
+[bridge:host->uart] N
+[bridge:uart->host] N
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] .
+[bridge:uart->host] .
+[bridge:host->uart] 
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host] 3
+[bridge:uart->host] 2
+[bridge:uart->host] 5
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] pipe=\\.\pipe\PDR16_AT_UART0
+[bridge] firmware=C:\Users\pdr0663\PDR-16_AT\tools\sim\scripts\..\..\..\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_AT_UART0
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge] pipe=\\.\pipe\PDR16_AT_UART0
+[bridge] firmware=C:\Users\pdr0663\PDR-16_AT\tools\sim\scripts\..\..\..\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_AT_UART0
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:host->uart] B
+[bridge:uart->host] B
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 3
+[bridge:uart->host] 3
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] S
+[bridge:uart->host] S
+[bridge:host->uart] I
+[bridge:uart->host] I
+[bridge:host->uart] N
+[bridge:uart->host] N
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] 1
+[bridge:uart->host] 1
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] I
+[bridge:uart->host] I
+[bridge:host->uart] *
+[bridge:uart->host] *
+[bridge:host->uart] F
+[bridge:uart->host] F
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] .
+[bridge:uart->host] .
+[bridge:host->uart] 
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:host->uart] B
+[bridge:uart->host] B
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 4
+[bridge:uart->host] 4
+[bridge:host->uart] 5
+[bridge:uart->host] 5
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] S
+[bridge:uart->host] S
+[bridge:host->uart] I
+[bridge:uart->host] I
+[bridge:host->uart] N
+[bridge:uart->host] N
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] 1
+[bridge:uart->host] 1
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] I
+[bridge:uart->host] I
+[bridge:host->uart] *
+[bridge:uart->host] *
+[bridge:host->uart] F
+[bridge:uart->host] F
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] .
+[bridge:uart->host] .
+[bridge:host->uart] 
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] pipe=\\.\pipe\PDR16_AT_UART0
+[bridge] firmware=C:\Users\pdr0663\PDR-16_AT\tools\sim\scripts\..\..\..\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_AT_UART0
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:host->uart] B
+[bridge:uart->host] B
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 3
+[bridge:uart->host] 3
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] S
+[bridge:uart->host] S
+[bridge:host->uart] I
+[bridge:uart->host] I
+[bridge:host->uart] N
+[bridge:uart->host] N
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] 1
+[bridge:uart->host] 1
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] I
+[bridge:uart->host] I
+[bridge:host->uart] *
+[bridge:uart->host] *
+[bridge:host->uart] F
+[bridge:uart->host] F
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] .
+[bridge:uart->host] .
+[bridge:host->uart] 
+[bridge:uart->host]  
+[bridge:uart->host] 4
+[bridge:uart->host] 9
+[bridge:uart->host] 8
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 

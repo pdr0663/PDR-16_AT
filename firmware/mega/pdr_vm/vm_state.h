@@ -24,8 +24,6 @@ typedef struct machine_state_t {
   uint16_t up;
   uint16_t last_ip;
   uint16_t fault_detail;
-  uint16_t mul_multiplicand;
-  uint16_t mul_multiplier;
   uint8_t running;
   uint8_t reported_fault;
   uint8_t fault;
@@ -47,8 +45,6 @@ static void vm_reset(machine_state_t *vm) {
   vm->up = VM_UPP;
   vm->last_ip = VM_COLD_VECTOR;
   vm->fault_detail = 0u;
-  vm->mul_multiplicand = 0u;
-  vm->mul_multiplier = 0u;
   vm->running = 1u;
   vm->reported_fault = 0u;
   vm->fault = VM_FAULT_NONE;
