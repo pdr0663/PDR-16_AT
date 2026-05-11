@@ -5812,3 +5812,27 @@ Loaded 236 bytes of Flash data at 0x116f0
 [bridge:uart->host] 
 [bridge:uart->host] 
 [bridge:uart->host] 
+[bridge:host->uart] B
+[bridge:uart->host] B
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart] 3
+[bridge:uart->host] 3
+[bridge:host->uart] 0
+[bridge:uart->host] 0
+[bridge:host->uart]  
+[bridge:uart->host]  
+[bridge:host->uart] .
+[bridge:uart->host] .
+[bridge:host->uart] 
+[bridge:uart->host]  
+[bridge:uart->host] 5
+[bridge:uart->host] 4
+[bridge:uart->host] 6
+[bridge:uart->host] 1
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
