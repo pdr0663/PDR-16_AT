@@ -1,0 +1,2 @@
+# Local simavr checkout/build products are large and environment-specific.
+/simavr/

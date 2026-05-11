@@ -4,6 +4,8 @@ This folder holds small launch scripts for the current `simavr`-based Mega VM wo
 
 ## Current Scripts
 
+- `bootstrap_simavr.sh`
+  - Clone and build a repo-local `simavr` checkout under `avrsim/simavr` when the runtime does not already provide one.
 - `run_mega_vm_simavr.sh`
   - Run the current Mega VM ELF under `simavr` from WSL/Linux.
 - `run_mega_vm_simavr.cmd`
@@ -13,7 +15,7 @@ This folder holds small launch scripts for the current `simavr`-based Mega VM wo
 - `run_mega_vm_picocom.cmd`
   - Windows `cmd` wrapper that launches the same `picocom` command through WSL.
 - `build_mega_vm_pty.sh`
-  - Build the PTY-backed Mega VM simulator harness against the local `simavr` tree.
+  - Build the PTY-backed Mega VM simulator harness against `SIMAVR_ROOT`, `avrsim/simavr`, or the original WSL checkout location.
 - `build_mega_vm_pty.cmd`
   - Windows `cmd` wrapper that launches the PTY harness build through WSL.
 - `run_mega_vm_pty.sh`
@@ -23,10 +25,12 @@ This folder holds small launch scripts for the current `simavr`-based Mega VM wo
 
 ## Notes
 
+- Run `bootstrap_simavr.sh` first on a fresh Linux/WSL runtime if neither `simavr` nor a built `SIMAVR_ROOT` is available.
 - The direct `simavr -m atmega2560 -f 16000000 ...elf` path is currently useful for proving the Mega VM boots and prints the seed Forth banner.
 - A `picocom` connection becomes useful after the PTY-backed harness creates `/tmp/simavr-uart0`.
 - The PTY-backed harness currently defaults to `pdr_vm.ino.hex` so it does not depend on ELF-loader support in the linked `libsimavr`.
 - Typical sequence:
+  - `./bootstrap_simavr.sh` if `simavr` is not already installed/built
   - `./build_mega_vm_pty.sh`
   - `./run_mega_vm_pty.sh`
   - in another WSL shell: `./run_mega_vm_picocom.sh`
