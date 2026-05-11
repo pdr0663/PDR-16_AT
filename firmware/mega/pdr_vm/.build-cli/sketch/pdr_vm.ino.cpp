@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\pdr0663\\PDR-16_AT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
+#line 1 "C:\\Users\\pdr0663\\PDR-16_XT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
 #include <Arduino.h>
 
 #include "vm_config.h"
@@ -8,17 +8,17 @@
 
 static machine_state_t g_vm;
 
-#line 10 "C:\\Users\\pdr0663\\PDR-16_AT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
+#line 10 "C:\\Users\\pdr0663\\PDR-16_XT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
 static void vm_report_status(machine_state_t *vm);
-#line 31 "C:\\Users\\pdr0663\\PDR-16_AT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
+#line 31 "C:\\Users\\pdr0663\\PDR-16_XT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
 static void vm_probe_host_serial(void);
-#line 51 "C:\\Users\\pdr0663\\PDR-16_AT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
+#line 51 "C:\\Users\\pdr0663\\PDR-16_XT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
 void setup(void);
-#line 56 "C:\\Users\\pdr0663\\PDR-16_AT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
+#line 56 "C:\\Users\\pdr0663\\PDR-16_XT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
 void loop(void);
-#line 10 "C:\\Users\\pdr0663\\PDR-16_AT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
+#line 10 "C:\\Users\\pdr0663\\PDR-16_XT\\firmware\\mega\\pdr_vm\\pdr_vm.ino"
 static void vm_report_status(machine_state_t *vm) {
-  Serial.print("\r\n[PDR-16/AT VM ");
+  Serial.print("\r\n[PDR-16/XT VM ");
   if (vm->fault == VM_FAULT_NONE) {
     Serial.print("stopped");
   } else {
