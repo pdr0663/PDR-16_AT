@@ -140,13 +140,13 @@ What happens on a VGA memory read:
 4. the VGA card drives the data bus
 5. the bus master samples the returned data
 
-## Why this matters for PDR-16/AT
+## Why this matters for PDR-16/XT
 
 Your ISA interface should model at least these fields for each bus transaction:
 
 - cycle type: `I/O` or `memory`
 - direction: `read` or `write`
-- width: initially `8-bit`, later optionally `16-bit`
+- width: `8-bit`
 - address
 - write data or read data
 
@@ -172,4 +172,4 @@ An `8-bit` first implementation is still very useful because:
 - VGA control registers are mostly byte-oriented
 - even VGA text memory can be accessed a byte at a time during bring-up
 
-Full `16-bit` support mainly improves efficiency and compatibility breadth, rather than being required for initial life signs.
+For PDR-16/XT, `8-bit` access is not just a bring-up shortcut; it is the intended permanent external-bus mode.

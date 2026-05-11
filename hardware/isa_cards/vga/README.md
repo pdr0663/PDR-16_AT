@@ -28,5 +28,5 @@ Until the chipset is identified, treat this as a generic ISA VGA-compatible adap
 ### Related docs
 
 - General VGA programming references:
-  - `C:\Users\pdr0663\PDR-16_AT\docs\peripherals\isa_cards\vga\references.md`
+  - `C:\Users\pdr0663\PDR-16_XT\docs\peripherals\isa_cards\vga\references.md`
 

@@ -34,7 +34,7 @@ Exact board documentation usually depends on the VGA chipset, commonly something
 
 When you have a clear photo or a chip marking from the card, record it in:
 
-- `C:\Users\pdr0663\PDR-16_AT\hardware\isa_cards\vga\README.md`
+- `C:\Users\pdr0663\PDR-16_XT\hardware\isa_cards\vga\README.md`
 
 Then we can search for the exact chipset manual.
 

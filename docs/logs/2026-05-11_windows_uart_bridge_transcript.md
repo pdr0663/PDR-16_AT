@@ -27,7 +27,7 @@ the host side.
 - The bridge build script was updated to use the portable MinGW bundle in
   `C:\avrsim-portable`.
 - The launcher in `tools/sim/scripts/run_mega_vm_teraterm.cmd` now starts the
-  native harness and then opens Tera Term on `\\.\pipe\PDR16_AT_UART0`.
+  native harness and then opens Tera Term on `\\.\pipe\PDR16_XT_UART0`.
 - The launcher path no longer depends on WSL or on the older C# bridge.
 
 ### Verification

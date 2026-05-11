@@ -11,7 +11,7 @@ This note records the current simulator-facing contract for the ATMEGA2560 build
 - Seed Forth ROM source artifacts:
   - `tools/forth/Assembler/eForth_lo.bin`
   - `tools/forth/Assembler/eForth_hi.bin`
-  - `firmware/mega/pdr_vm/generated/pdr16_at_forth_image.h`
+  - `firmware/mega/pdr_vm/generated/pdr16_xt_forth_image.h`
 
 The generated Forth header currently exports `32768` logical ROM words, matching the VM's `0x0000..0x7FFF` logical ROM window.
 

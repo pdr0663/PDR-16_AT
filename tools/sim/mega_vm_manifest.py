@@ -9,15 +9,15 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 VM_CONFIG_PATH = REPO_ROOT / "firmware" / "mega" / "pdr_vm" / "vm_config.h"
 ELF_PATH = REPO_ROOT / "firmware" / "mega" / "pdr_vm" / ".build-cli" / "pdr_vm.ino.elf"
 HEX_PATH = REPO_ROOT / "firmware" / "mega" / "pdr_vm" / ".build-cli" / "pdr_vm.ino.hex"
-ROM_HEADER_PATH = REPO_ROOT / "firmware" / "mega" / "pdr_vm" / "generated" / "pdr16_at_forth_image.h"
+ROM_HEADER_PATH = REPO_ROOT / "firmware" / "mega" / "pdr_vm" / "generated" / "pdr16_xt_forth_image.h"
 ROM_LOW_PATH = REPO_ROOT / "tools" / "forth" / "Assembler" / "eForth_lo.bin"
 ROM_HIGH_PATH = REPO_ROOT / "tools" / "forth" / "Assembler" / "eForth_hi.bin"
 
 
 DEFINE_RE = re.compile(r"^\s*#define\s+(\w+)\s+(.+?)\s*$", re.MULTILINE)
 UINT_SUFFIX_RE = re.compile(r"(?<=\w)(?:ul|u)\b", re.IGNORECASE)
-WORD_COUNT_RE = re.compile(r"^\s*#define\s+PDR16_AT_ROM_WORDS\s+(\d+)u\s*$", re.MULTILINE)
-CHUNK_COUNT_RE = re.compile(r"^\s*#define\s+PDR16_AT_ROM_CHUNK_COUNT\s+(\d+)u\s*$", re.MULTILINE)
+WORD_COUNT_RE = re.compile(r"^\s*#define\s+PDR16_XT_ROM_WORDS\s+(\d+)u\s*$", re.MULTILINE)
+CHUNK_COUNT_RE = re.compile(r"^\s*#define\s+PDR16_XT_ROM_CHUNK_COUNT\s+(\d+)u\s*$", re.MULTILINE)
 
 
 def _load_defines() -> dict[str, str]:
@@ -64,7 +64,7 @@ def build_manifest() -> dict[str, object]:
         raise RuntimeError("Split ROM byte streams differ in length.")
 
     return {
-        "project": "PDR-16_AT",
+        "project": "PDR-16_XT",
         "target": {
             "mcu": "atmega2560",
             "fqbn": "arduino:avr:mega",

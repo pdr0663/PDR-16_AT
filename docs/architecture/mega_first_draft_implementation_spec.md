@@ -1,8 +1,8 @@
-# PDR-16/AT MEGA First-Draft Implementation Specification
+# PDR-16/XT MEGA First-Draft Implementation Specification
 
 ## 1. Purpose
 
-This document defines the first runnable `PDR-16/AT` implementation on the Arduino Mega 2560.
+This document defines the first runnable `PDR-16/XT` implementation on the Arduino Mega 2560.
 
 The goal of this draft is:
 
@@ -11,7 +11,7 @@ The goal of this draft is:
 - preserve the V5 Forth-visible execution model where practical
 - avoid ISA peripherals for the first bring-up
 - avoid host-backed file services
-- create a platform that can later grow into the full segmented `PDR-16/AT` machine
+- create the first runnable bring-up platform for the fixed `PDR-16/XT` machine
 
 This is a bring-up implementation, not the final architecture.
 
@@ -31,7 +31,7 @@ The only compatibility surface that must be preserved is the Forth-visible machi
 
 ## 3. Architectural Position
 
-The MEGA firmware is an implementation of the `PDR-16/AT` virtual machine, not the final CPU architecture.
+The MEGA firmware is an implementation of the `PDR-16/XT` virtual machine, not the final CPU architecture.
 
 The first draft uses:
 
@@ -224,7 +224,7 @@ Therefore the MEGA firmware shall consume generated artifacts rather than recrea
 
 The build process shall export an Arduino-consumable ROM header:
 
-- `firmware/mega/pdr_vm/generated/pdr16_at_forth_image.h`
+- `firmware/mega/pdr_vm/generated/pdr16_xt_forth_image.h`
 
 This header contains:
 

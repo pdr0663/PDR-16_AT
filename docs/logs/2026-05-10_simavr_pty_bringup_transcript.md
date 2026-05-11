@@ -15,7 +15,7 @@ This chat moved the ATMEGA2560 simulator work from "simavr boots the Mega ELF an
 - Confirmed the important built artifacts already exist:
   - `firmware/mega/pdr_vm/.build-cli/pdr_vm.ino.elf`
   - `firmware/mega/pdr_vm/.build-cli/pdr_vm.ino.hex`
-  - `firmware/mega/pdr_vm/generated/pdr16_at_forth_image.h`
+  - `firmware/mega/pdr_vm/generated/pdr16_xt_forth_image.h`
 
 ### 2. Capturing the simulator contract in-repo
 

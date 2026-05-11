@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AvrSimPipeBridge
-build_property.ProjectDir = C:\Users\pdr0663\PDR-16_AT\tools\sim\src\AvrSimPipeBridge\
+build_property.ProjectDir = C:\Users\pdr0663\PDR-16_XT\tools\sim\src\AvrSimPipeBridge\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -128,7 +128,7 @@ internal static class Program
 
         if (pipeName is null)
         {
-            pipeName = "PDR16_AT_UART0";
+            pipeName = "PDR16_XT_UART0";
         }
         if (avrsimExe is null)
         {

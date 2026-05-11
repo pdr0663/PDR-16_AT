@@ -55,11 +55,11 @@ Memory is still tight. Be careful with further RAM growth.
 Useful commands used in this session:
 
 ```powershell
-& 'C:\Program Files\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe' compile --fqbn arduino:avr:mega --build-path 'C:\Users\pdr0663\PDR-16_AT\firmware\mega\pdr_vm\.build-cli' 'C:\Users\pdr0663\PDR-16_AT\firmware\mega\pdr_vm'
+& 'C:\Program Files\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe' compile --fqbn arduino:avr:mega --build-path 'C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli' 'C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm'
 ```
 
 ```powershell
-& 'C:\Program Files\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe' upload -p COM4 --fqbn arduino:avr:mega --input-dir 'C:\Users\pdr0663\PDR-16_AT\firmware\mega\pdr_vm\.build-cli' 'C:\Users\pdr0663\PDR-16_AT\firmware\mega\pdr_vm'
+& 'C:\Program Files\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe' upload -p COM4 --fqbn arduino:avr:mega --input-dir 'C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli' 'C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm'
 ```
 
 If uploads fail, the usual cause was `COM4` being open in the IDE serial monitor or Tera Term.

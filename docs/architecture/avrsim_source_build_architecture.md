@@ -1,7 +1,7 @@
 # avrsim Source Build Architecture
 
 This note defines the Windows-only three-phase simulator workflow for
-`PDR-16/AT`.
+`PDR-16/XT`.
 
 1. Build the Forth system image from the Python seed plus Forth library source
    tree.
@@ -27,7 +27,7 @@ The Windows wrapper for that step is:
 
 That script rebuilds the copied Forth image and emits the generated ROM header:
 
-- `firmware/mega/pdr_vm/generated/pdr16_at_forth_image.h`
+- `firmware/mega/pdr_vm/generated/pdr16_xt_forth_image.h`
 
 It also refreshes the split ROM binaries under:
 

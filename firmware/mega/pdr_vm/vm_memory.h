@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <avr/pgmspace.h>
-#include "generated/pdr16_at_forth_image.h"
+#include "generated/pdr16_xt_forth_image.h"
 #include "vm_config.h"
 #include "vm_state.h"
 
@@ -27,7 +27,7 @@ static void vm_memory_reset(void) {
 }
 
 static uint16_t vm_read_rom_word(uint16_t addr) {
-  return pdr16_at_rom_read_word(addr);
+  return pdr16_xt_rom_read_word(addr);
 }
 
 static uint16_t vm_read_word(machine_state_t *vm, uint16_t addr) {

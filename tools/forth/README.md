@@ -1,6 +1,6 @@
-# PDR-16/AT Forth Build Assets
+# PDR-16/XT Forth Build Assets
 
-This directory contains the initial Forth build machinery copied from the V5 reference system and trimmed for the `PDR-16_AT` MEGA-first draft.
+This directory contains the initial Forth build machinery copied from the V5 reference system and trimmed for the `PDR-16_XT` MEGA-first draft.
 
 ## Scope
 
@@ -13,9 +13,9 @@ This directory contains the initial Forth build machinery copied from the V5 ref
 
 ## Layout
 
-- [Assembler](C:/Users/pdr0663/PDR-16_AT/tools/forth/Assembler)
-- [Forth Sources](C:/Users/pdr0663/PDR-16_AT/tools/forth/Forth%20Sources)
-- [primitive_metadata.py](C:/Users/pdr0663/PDR-16_AT/tools/forth/Microcode%20Assembler/primitive_metadata.py)
+- [Assembler](C:/Users/pdr0663/PDR-16_XT/tools/forth/Assembler)
+- [Forth Sources](C:/Users/pdr0663/PDR-16_XT/tools/forth/Forth%20Sources)
+- [primitive_metadata.py](C:/Users/pdr0663/PDR-16_XT/tools/forth/Microcode%20Assembler/primitive_metadata.py)
 
 ## MEGA Draft Adjustments
 
@@ -32,6 +32,6 @@ python tools\image_builder\export_forth_rom_header.py
 
 That rebuilds the copied Forth image and emits:
 
-- [pdr16_at_forth_image.h](C:/Users/pdr0663/PDR-16_AT/firmware/mega/pdr_vm/generated/pdr16_at_forth_image.h)
+- [pdr16_xt_forth_image.h](C:/Users/pdr0663/PDR-16_XT/firmware/mega/pdr_vm/generated/pdr16_xt_forth_image.h)
 
 The generated header is intended for inclusion by the Arduino-side VM firmware.

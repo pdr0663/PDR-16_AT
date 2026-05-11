@@ -98,7 +98,7 @@ Suggested behavior:
 - open the PTY with Python standard library modules (`os`, `termios`, `select`) so the repo does not need a new dependency just to talk to `/tmp/simavr-uart0`;
 - normalize line endings to carriage return (`\r`), matching the PowerShell sender;
 - capture all target output to a transcript;
-- fail fast if output matches VM fault patterns such as `fault <n>` or `[PDR-16/AT VM fault ...]`;
+- fail fast if output matches VM fault patterns such as `fault <n>` or `[PDR-16/XT VM fault ...]`;
 - optionally wait for a known prompt/settled-output condition after each line.
 
 ### Stage 2: orchestration script
@@ -156,19 +156,19 @@ Capture metadata after source compilation:
 
 ## Suggested first files to inspect in the next chat
 
-- `tools/sim/src/mega_vm_pty.c` — current PTY-backed simulator harness.
-- `tools/sim/scripts/run_mega_vm_pty.sh` — starts the PTY harness.
-- `tools/sim/scripts/run_mega_vm_picocom.sh` — proves the PTY path used manually today.
-- `tools/forth/send_forth_file.ps1` — behavior template for automated source feeding.
-- `firmware/mega/pdr_vm/vm_config.h` — logical memory map constants.
-- `firmware/mega/pdr_vm/vm_memory.h` — location of low/high RAM arrays.
-- `docs/architecture/mega_simulator_contract.md` — existing capture contract.
-- `tools/sim/mega_vm_manifest.py` — machine-readable manifest to feed future tooling.
+- `tools/sim/src/mega_vm_pty.c` â€” current PTY-backed simulator harness.
+- `tools/sim/scripts/run_mega_vm_pty.sh` â€” starts the PTY harness.
+- `tools/sim/scripts/run_mega_vm_picocom.sh` â€” proves the PTY path used manually today.
+- `tools/forth/send_forth_file.ps1` â€” behavior template for automated source feeding.
+- `firmware/mega/pdr_vm/vm_config.h` â€” logical memory map constants.
+- `firmware/mega/pdr_vm/vm_memory.h` â€” location of low/high RAM arrays.
+- `docs/architecture/mega_simulator_contract.md` â€” existing capture contract.
+- `tools/sim/mega_vm_manifest.py` â€” machine-readable manifest to feed future tooling.
 
 ## Suggested prompt for the next chat
 
 ```text
-We need to continue the PDR-16/AT simavr automation work.  Please read docs/logs/2026-05-11_simavr_forth_io_capture_handoff.md first.  The goal is to add a Linux/WSL automated workflow that starts the PTY-backed simavr Mega VM, feeds Forth source files into /tmp/simavr-uart0, detects compile faults, and extracts a deterministic binary image of the post-compile Forth RAM/dictionary.  Prefer a serial export protocol first so the same mechanism can eventually work on physical hardware.
+We need to continue the PDR-16/XT simavr automation work.  Please read docs/logs/2026-05-11_simavr_forth_io_capture_handoff.md first.  The goal is to add a Linux/WSL automated workflow that starts the PTY-backed simavr Mega VM, feeds Forth source files into /tmp/simavr-uart0, detects compile faults, and extracts a deterministic binary image of the post-compile Forth RAM/dictionary.  Prefer a serial export protocol first so the same mechanism can eventually work on physical hardware.
 ```
 
 ## Verification performed for this handoff

@@ -1,6 +1,6 @@
 # Chat Transcript - 2026-05-10 MEGA VM Bring-Up
 
-This file captures the later chat session that implemented and debugged the first runnable Arduino Mega Forth VM draft for `PDR-16/AT`.
+This file captures the later chat session that implemented and debugged the first runnable Arduino Mega Forth VM draft for `PDR-16/XT`.
 
 ## Transcript
 

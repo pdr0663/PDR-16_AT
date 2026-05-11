@@ -22,7 +22,7 @@ Discussion focused on bringing up the copied Forth libraries on the Arduino Mega
 
 - Verified that the AT repo already has a host-side Forth image build path.
 - `tools/image_builder/export_forth_rom_header.py` rebuilds the copied Forth image and emits:
-  - `firmware/mega/pdr_vm/generated/pdr16_at_forth_image.h`
+  - `firmware/mega/pdr_vm/generated/pdr16_xt_forth_image.h`
 - Verified that the four library files are precompiled on the host via:
   - `tools/forth/Assembler/precompile_phase1.py`
 - Verified they are emitted into the seed ROM by:

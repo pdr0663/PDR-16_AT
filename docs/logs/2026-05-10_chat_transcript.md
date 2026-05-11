@@ -1,6 +1,6 @@
 # Chat Transcript - 2026-05-10
 
-This file captures the working transcript for the PDR-16/AT chat session up to the point where the user requested that it be written into the repository.
+This file captures the working transcript for the PDR-16/XT chat session up to the point where the user requested that it be written into the repository.
 
 ## Transcript
 
@@ -11,7 +11,7 @@ Here is a working spec for a new machine (attached).
 Can you please set up folders as follows:
 
 ```text
-PDR-16_AT/
+PDR-16_XT/
     firmware/
         mega/
             pdr_vm/
@@ -44,7 +44,7 @@ PDR-16_AT/
 
 ### Assistant
 
-Created the requested folder structure under `C:\Users\pdr0663\PDR-16_AT`.
+Created the requested folder structure under `C:\Users\pdr0663\PDR-16_XT`.
 
 ### User
 
@@ -326,7 +326,7 @@ Ok, act on this:
 The file `make_transcript_commit_text.txt` requested:
 
 > Please write the transcript of this chat to a file in the repo here:
-> `C:\Users\pdr0663\PDR-16_AT\docs\logs`
+> `C:\Users\pdr0663\PDR-16_XT\docs\logs`
 > and show me some commit text here in the chat.
 
 ### Assistant
@@ -338,9 +338,9 @@ Created this transcript file in `docs/logs` and prepared commit text suggestions
 Initial Implementation - MEGA only
 
 I have a specification as follows:
-`C:\Users\pdr0663\PDR-16_AT\docs\architecture\pdr_16_at_broad_brush_spec.md`
+`C:\Users\pdr0663\PDR-16_XT\docs\architecture\pdr_16_xt_broad_brush_spec.md`
 and a memory map spec:
-`C:\Users\pdr0663\PDR-16_AT\docs\architecture\segmented_memory_strategy.md`
+`C:\Users\pdr0663\PDR-16_XT\docs\architecture\segmented_memory_strategy.md`
 
 I want to produce a first-draft system in the MEGA. For a first draft, we'll allocate 32kw to the ROM space, and use as much RAM space as possible to simulate the writeable area of Forth, at the top of memory. ISA memory will be missing from the first draft. The draft implementation will produce a running Forth system, with no peripherals, and I/I with the MEGAs serial port.
 
@@ -433,11 +433,11 @@ Committed to a C-like Arduino implementation style using plain structs, arrays, 
 
 ### User
 
-Sounds good to me. Note the Python script for the Forth system will need to be modified to simplify the console I/O, otherwise it will be quite similar. Perhaps you can copy the necessary files from V5 over to `PDR-16_AT`.
+Sounds good to me. Note the Python script for the Forth system will need to be modified to simplify the console I/O, otherwise it will be quite similar. Perhaps you can copy the necessary files from V5 over to `PDR-16_XT`.
 
 ### Assistant
 
-Copied the minimum Forth build assets from V5 into `PDR-16_AT`:
+Copied the minimum Forth build assets from V5 into `PDR-16_XT`:
 
 - `tools/forth/Assembler`
 - `tools/forth/Forth Sources`
@@ -449,7 +449,7 @@ Made the following draft-specific updates:
 - added `tools/image_builder/export_forth_rom_header.py`
 - added `tools/forth/README.md`
 - rebuilt the copied Forth image
-- generated `firmware/mega/pdr_vm/generated/pdr16_at_forth_image.h`
+- generated `firmware/mega/pdr_vm/generated/pdr16_xt_forth_image.h`
 
 Verified the rebuilt layout:
 

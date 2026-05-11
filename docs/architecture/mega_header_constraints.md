@@ -27,6 +27,6 @@ The draft remap moves the previously used `D8` through `D13` assignments onto `D
 
 The revised draft pin allocation is captured in:
 
-- `C:\Users\pdr0663\PDR-16_AT\MEGA Pinouts.reallocated.csv`
+- `C:\Users\pdr0663\PDR-16_XT\MEGA Pinouts.reallocated.csv`
 
 The original `MEGA Pinouts.csv` was left unchanged because it was locked by another process at edit time.

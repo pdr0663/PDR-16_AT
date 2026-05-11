@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pdr0663\\PDR-16_AT\\tools\\sim\\src\\AvrSimPipeBridge\\AvrSimPipeBridge.csproj",
+      "projectUniqueName": "C:\\Users\\pdr0663\\PDR-16_XT\\tools\\sim\\src\\AvrSimPipeBridge\\AvrSimPipeBridge.csproj",
       "projectName": "AvrSimPipeBridge",
-      "projectPath": "C:\\Users\\pdr0663\\PDR-16_AT\\tools\\sim\\src\\AvrSimPipeBridge\\AvrSimPipeBridge.csproj",
+      "projectPath": "C:\\Users\\pdr0663\\PDR-16_XT\\tools\\sim\\src\\AvrSimPipeBridge\\AvrSimPipeBridge.csproj",
       "packagesPath": "C:\\Users\\pdr0663\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pdr0663\\PDR-16_AT\\tools\\sim\\src\\AvrSimPipeBridge\\obj\\",
+      "outputPath": "C:\\Users\\pdr0663\\PDR-16_XT\\tools\\sim\\src\\AvrSimPipeBridge\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

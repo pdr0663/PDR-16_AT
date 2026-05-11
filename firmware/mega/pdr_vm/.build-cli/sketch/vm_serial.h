@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\pdr0663\\PDR-16_AT\\firmware\\mega\\pdr_vm\\vm_serial.h"
+#line 1 "C:\\Users\\pdr0663\\PDR-16_XT\\firmware\\mega\\pdr_vm\\vm_serial.h"
 #ifndef PDR_VM_SERIAL_H
 #define PDR_VM_SERIAL_H
 

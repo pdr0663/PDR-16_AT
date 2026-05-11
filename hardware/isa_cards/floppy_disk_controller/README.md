@@ -33,5 +33,5 @@ That means the `uPD765` command model is still relevant, but the `WD37C65` famil
 
 ### Related docs
 
-- `C:\Users\pdr0663\PDR-16_AT\docs\peripherals\isa_cards\floppy_disk_controller\references.md`
+- `C:\Users\pdr0663\PDR-16_XT\docs\peripherals\isa_cards\floppy_disk_controller\references.md`
 

@@ -8,7 +8,7 @@
 static machine_state_t g_vm;
 
 static void vm_report_status(machine_state_t *vm) {
-  Serial.print("\r\n[PDR-16/AT VM ");
+  Serial.print("\r\n[PDR-16/XT VM ");
   if (vm->fault == VM_FAULT_NONE) {
     Serial.print("stopped");
   } else {

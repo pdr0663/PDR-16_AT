@@ -1,10 +1,24 @@
 # CPLD partitioning draft
 
+## Current project direction
+
+Much of this note explores `3`- and `4`-CPLD partitioning plus possible `16-bit` ISA growth.
+
+That is no longer the active hardware direction for PDR-16/XT.
+
+The current target is:
+
+- exactly `2` `ATF1504AS` devices
+- XT-class `8-bit` ISA interaction only
+- no planned expansion to `16-bit` ISA transfers
+
+Read the rest of this file as background design exploration. Where it conflicts with the current direction, prefer the two-PLD summary in `pdr_16_xt_broad_brush_spec.md`.
+
 ## Short answer
 
 No, the Mega does **not** need to transfer full parallel address and data buses directly into the CPLDs.
 
-That would consume pins very quickly and is not the best fit for three `ATF1504AS` devices.
+That would consume pins very quickly and is not the best fit for a compact two-`ATF1504AS` design.
 
 A better structure is:
 
@@ -35,7 +49,7 @@ If you are using the `44-pin` parts, this whole allocation gets much tighter and
 
 Use a shared local interface like this:
 
-- `MD[7:0]` shared local data bus from Mega to all three CPLDs
+- `MD[7:0]` shared local data bus from Mega to both CPLDs
 - `RA[3:0]` local register address bus
 - `RD#`
 - `WR#`
@@ -84,6 +98,22 @@ But for three CPLDs that also need to:
 the wide host-side bus burns pins without buying much.
 
 The narrower register interface is a better pin trade.
+
+## Current two-PLD recommendation
+
+For the fixed PDR-16/XT hardware target, the simplest practical split is:
+
+- `isa_ctrl_addr`
+  - Mega register decode / handshake
+  - ISA address latching and drive
+  - cycle FSM for `IOR#`, `IOW#`, `MEMR#`, `MEMW#`, `BALE`, and `RESETDRV`
+- `isa_data_irq`
+  - write-data latch
+  - read-data capture
+  - `SD[7:0]` direction control
+  - IRQ collection / status readback
+
+That keeps the architecture aligned with the permanent `8-bit` ISA scope and avoids over-designing for an expansion path that is no longer planned.
 
 ## Functional split across 3 CPLDs
 
@@ -762,8 +792,8 @@ This preserves the upgrade path without paying the full complexity cost in the f
 
 See also:
 
-- `C:\Users\pdr0663\PDR-16_AT\MEGA Pinouts.local_bus_reserved_16.csv`
-- `C:\Users\pdr0663\PDR-16_AT\docs\architecture\mega_cpld_local_bus_reservations.md`
+- `C:\Users\pdr0663\PDR-16_XT\MEGA Pinouts.local_bus_reserved_16.csv`
+- `C:\Users\pdr0663\PDR-16_XT\docs\architecture\mega_cpld_local_bus_reservations.md`
 
 ## My recommendation
 

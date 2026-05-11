@@ -27,5 +27,5 @@ This backplane is the physical ISA expansion substrate for the machine, so its s
 
 ### Related docs
 
-- `C:\Users\pdr0663\PDR-16_AT\docs\architecture\backplane_notes.md`
+- `C:\Users\pdr0663\PDR-16_XT\docs\architecture\backplane_notes.md`
 

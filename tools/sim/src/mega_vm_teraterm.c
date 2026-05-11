@@ -24,7 +24,7 @@ enum {
   IRQ_UART_PIPE_COUNT,
 };
 
-static const char *const kDefaultPipeName = "PDR16_AT_UART0";
+static const char *const kDefaultPipeName = "PDR16_XT_UART0";
 static const char *const kDefaultLogPath = "tools\\sim\\logs\\mega_vm_pipe_bridge.log";
 static const char *const kDefaultFirmware =
     "firmware\\mega\\pdr_vm\\.build-cli\\pdr_vm.ino.elf";

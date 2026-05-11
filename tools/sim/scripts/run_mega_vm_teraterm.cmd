@@ -6,7 +6,7 @@ set "REPO_ROOT=%SCRIPT_DIR%..\..\.."
 set "DEFAULT_ELF=%REPO_ROOT%\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf"
 set "DEFAULT_HEX=%REPO_ROOT%\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.hex"
 set "TERATERM_EXE=%TERATERM_EXE%"
-set "TERATERM_TITLE=PDR-16/AT avrsim"
+set "TERATERM_TITLE=PDR-16/XT avrsim"
 set "BRIDGE_EXE=%REPO_ROOT%\tools\sim\bin\MegaVmTeraTerm\mega_vm_teraterm.exe"
 set "BRIDGE_LOG_DIR=%REPO_ROOT%\tools\sim\logs"
 set "PIPE_NAME=%AVRSIM_PIPE%"
@@ -31,7 +31,7 @@ exit /b 1
 
 :args_done
 
-if not defined PIPE_NAME set "PIPE_NAME=PDR16_AT_UART0"
+if not defined PIPE_NAME set "PIPE_NAME=PDR16_XT_UART0"
 
 if defined TERATERM_EXE if not exist "%TERATERM_EXE%" set "TERATERM_EXE="
 

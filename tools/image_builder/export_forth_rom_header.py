@@ -11,7 +11,7 @@ REPO_ROOT = SCRIPT_DIR.parents[1]
 FORTH_DIR = REPO_ROOT / "tools" / "forth"
 ASSEMBLER_DIR = FORTH_DIR / "Assembler"
 ASSEMBLY_SCRIPT = ASSEMBLER_DIR / "eForth.asm.py"
-OUTPUT_HEADER = REPO_ROOT / "firmware" / "mega" / "pdr_vm" / "generated" / "pdr16_at_forth_image.h"
+OUTPUT_HEADER = REPO_ROOT / "firmware" / "mega" / "pdr_vm" / "generated" / "pdr16_xt_forth_image.h"
 
 
 def read_split_rom() -> list[int]:
@@ -28,21 +28,21 @@ def render_header(words: list[int]) -> str:
     chunk_words = 8192
     chunk_count = (len(words) + chunk_words - 1) // chunk_words
     lines: list[str] = []
-    lines.append("#ifndef PDR16_AT_FORTH_IMAGE_H")
-    lines.append("#define PDR16_AT_FORTH_IMAGE_H")
+    lines.append("#ifndef PDR16_XT_FORTH_IMAGE_H")
+    lines.append("#define PDR16_XT_FORTH_IMAGE_H")
     lines.append("")
     lines.append("#include <avr/pgmspace.h>")
     lines.append("#include <stdint.h>")
     lines.append("")
-    lines.append(f"#define PDR16_AT_ROM_WORDS {len(words)}u")
-    lines.append(f"#define PDR16_AT_ROM_CHUNK_WORDS {chunk_words}u")
-    lines.append(f"#define PDR16_AT_ROM_CHUNK_COUNT {chunk_count}u")
+    lines.append(f"#define PDR16_XT_ROM_WORDS {len(words)}u")
+    lines.append(f"#define PDR16_XT_ROM_CHUNK_WORDS {chunk_words}u")
+    lines.append(f"#define PDR16_XT_ROM_CHUNK_COUNT {chunk_count}u")
     lines.append("")
     for chunk_index in range(chunk_count):
         start = chunk_index * chunk_words
         end = min(start + chunk_words, len(words))
         lines.append(
-            f"static const uint16_t pdr16_at_forth_rom_chunk_{chunk_index}[{end - start}] PROGMEM = {{"
+            f"static const uint16_t pdr16_xt_forth_rom_chunk_{chunk_index}[{end - start}] PROGMEM = {{"
         )
         row: list[str] = []
         for index in range(start, end):
@@ -53,14 +53,14 @@ def render_header(words: list[int]) -> str:
         lines.append("};")
         lines.append("")
 
-    lines.append("static inline uint16_t pdr16_at_rom_read_word(uint16_t addr) {")
-    lines.append("    const uint16_t chunk_index = addr / PDR16_AT_ROM_CHUNK_WORDS;")
-    lines.append("    const uint16_t chunk_offset = addr % PDR16_AT_ROM_CHUNK_WORDS;")
+    lines.append("static inline uint16_t pdr16_xt_rom_read_word(uint16_t addr) {")
+    lines.append("    const uint16_t chunk_index = addr / PDR16_XT_ROM_CHUNK_WORDS;")
+    lines.append("    const uint16_t chunk_offset = addr % PDR16_XT_ROM_CHUNK_WORDS;")
     lines.append("    switch (chunk_index) {")
     for chunk_index in range(chunk_count):
         lines.append(f"        case {chunk_index}u:")
         lines.append(
-            f"            return pgm_read_word_far(pgm_get_far_address(pdr16_at_forth_rom_chunk_{chunk_index}) + ((uint32_t)chunk_offset * 2u));"
+            f"            return pgm_read_word_far(pgm_get_far_address(pdr16_xt_forth_rom_chunk_{chunk_index}) + ((uint32_t)chunk_offset * 2u));"
         )
     lines.append("        default:")
     lines.append("            return 0xFFFFu;")

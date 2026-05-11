@@ -1,12 +1,14 @@
-# Mega/CPLD local bus reservations
+# Mega/CPLD local bus interface
 
 ## Goal
 
-Keep the **active** Mega-to-CPLD local interface at `8-bit`, but reserve a clean path for a later upgrade to `16-bit` local transfers without rethinking the whole pin map.
+Define the active Mega-to-CPLD local interface for the fixed two-PLD, 8-bit PDR-16/XT design.
 
-## Active now
+This note no longer reserves pins for a later 16-bit local-bus expansion. The intention is to document the actual interface we mean to build.
 
-The intended rev-A active local interface is:
+## Active interface
+
+The intended local interface is:
 
 - `MD[7:0]`
 - `RA[3:0]`
@@ -14,46 +16,35 @@ The intended rev-A active local interface is:
 - `WR#`
 - `START`
 - `RESET`
-- `CS0..CS3`
+- `CS0..CS1`
 - `BUSY`
 - `DONE`
 - `IRQ_PENDING`
-- `READ_DATA_READY`
+- optional `READ_DATA_READY`
 
-This is enough for an `8-bit` register-oriented interface to the four CPLDs.
+This is enough for an 8-bit register-oriented interface to two CPLDs.
 
-## Reserved for future 16-bit local communication
+## CPLD-side policy
 
-The following Mega pins are deliberately held aside for a possible future widening of the local bus:
+The CPLDs should spend their pins on the fixed XT-class bus path rather than on hypothetical width growth:
 
-- `D30..D37` reserved as `MD[15:8]`
-- `D42..D49` reserved as `EXT[7:0]`
-- `A8..A15` reserved if a later protocol wants a wider host-side address or sideband field
+- latch ISA address and control fields
+- drive `SA[19:0]`
+- drive or sample `SD[7:0]`
+- sequence `IOR#`, `IOW#`, `MEMR#`, and `MEMW#`
+- return read data and status to the Mega
+- collect a practical subset of ISA IRQ inputs
 
-The point is not that all of these must be used. The point is to prevent rev-A wiring from casually consuming them elsewhere.
+## Architectural point
 
-## CPLD-side reservation policy
+The internal PDR machine remains 16-bit and word-oriented.
 
-On the CPLD side, reserve matching resources for:
-
-- `MD[15:8]` visibility on any CPLD that might later participate in word transfers
-- optional byte-lane / width control signals
-- optional extra local readback or handshake signals
-
-In practical terms:
-
-- `data_path` should keep a plausible growth path for high-byte data handling
-- `isa_ctrl_irq` should keep room for width-policy and lane-control support
-- avoid using every spare I/O on those devices for unrelated convenience features
-
-## Important architectural point
-
-These reservations do **not** change the recommendation that rev-A communication remain `8-bit`.
-
-They only preserve the option to widen the local Mega/CPLD bus later if experience shows it is worth the added routing and CPLD complexity.
+The local Mega/CPLD link and the external ISA bus are both intentionally 8-bit oriented. Byte-wide interaction is part of the design, not a temporary concession.
 
 ## File
 
 The reserved-pin draft is captured in:
 
-- `C:\Users\pdr0663\PDR-16_AT\MEGA Pinouts.local_bus_reserved_16.csv`
+- `C:\Users\pdr0663\PDR-16_XT\MEGA Pinouts.local_bus_reserved_16.csv`
+
+That filename is historical. Its contents should be interpreted as a pin-allocation worksheet, not as evidence of a planned 16-bit bus upgrade.
