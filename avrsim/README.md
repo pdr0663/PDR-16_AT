@@ -1,8 +1,8 @@
 # avrsim Workspace
 
 This directory is intentionally a local simulator workspace.  The `simavr`
-source tree is not vendored into the repository; clone and build it here when a
-Linux/WSL runtime does not already provide `simavr`.
+source tree is present locally here so the simulator can be built either from
+Linux/WSL or from Windows/MSYS2.
 
 ```sh
 tools/sim/scripts/bootstrap_simavr.sh
@@ -27,3 +27,5 @@ tools/sim/scripts/run_mega_vm_picocom.sh
 
 If `simavr` lives somewhere else, set `SIMAVR_ROOT` to the checkout root before
 running the build script.
+
+For Windows builds, see [README.windows.md](README.windows.md).
