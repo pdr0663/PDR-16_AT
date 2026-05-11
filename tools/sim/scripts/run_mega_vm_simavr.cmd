@@ -1,14 +1,27 @@
 @echo off
-setlocal
+setlocal EnableExtensions
 
 set "SCRIPT_DIR=%~dp0"
 set "REPO_ROOT=%SCRIPT_DIR%..\..\.."
-set "SIMAVR_BIN=simavr"
-set "WSL_SCRIPT=/mnt/c/Users/Paul/PDR-16_AT/tools/sim/scripts/run_mega_vm_simavr.sh"
+set "AVRSIM_EXE=%REPO_ROOT%\avrsim\avrsim.exe"
+set "DEFAULT_ELF=%REPO_ROOT%\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf"
+set "DEFAULT_HEX=%REPO_ROOT%\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.hex"
 
-if not exist "%REPO_ROOT%\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf" (
-  echo ELF not found: %REPO_ROOT%\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+if not exist "%AVRSIM_EXE%" (
+  echo Missing avrsim binary: "%AVRSIM_EXE%"
+  echo Copy the Windows build into the repo's avrsim folder and name it avrsim.exe.
   exit /b 1
 )
 
-wsl bash -lc "SIMAVR_BIN='%SIMAVR_BIN%' '%WSL_SCRIPT%'"
+set "FIRMWARE=%DEFAULT_ELF%"
+if not exist "%FIRMWARE%" set "FIRMWARE=%DEFAULT_HEX%"
+if not exist "%FIRMWARE%" (
+  echo Missing firmware image:
+  echo   "%DEFAULT_ELF%"
+  echo   "%DEFAULT_HEX%"
+  exit /b 1
+)
+
+echo Running:
+echo   "%AVRSIM_EXE%" -m atmega2560 -f 16000000 "%FIRMWARE%" %*
+"%AVRSIM_EXE%" -m atmega2560 -f 16000000 "%FIRMWARE%" %*

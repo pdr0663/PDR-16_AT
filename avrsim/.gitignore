@@ -1,2 +1,8 @@
-# Local simavr checkout/build products are large and environment-specific.
-/simavr/
+# Windows avrsim artifacts copied in from another machine.
+/*.exe
+/*.dll
+/*.a
+/*.lib
+/*.pdb
+/*.exp
+/*.manifest
