@@ -1,0 +1,20 @@
+[bridge] pipe=\\.\pipe\PDR16_AT_TESTPIPE3
+[bridge] firmware=C:\Users\pdr0663\PDR-16_AT\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_AT_TESTPIPE3
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge] WriteFile failed: 232
+[bridge] WriteFile failed: 232

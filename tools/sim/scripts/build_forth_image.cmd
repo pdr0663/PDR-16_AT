@@ -13,4 +13,5 @@ if not exist "%BUILDER%" (
 
 echo Building the seeded Forth image from Python sources...
 %PYTHON% "%BUILDER%"
+pause
 exit /b %ERRORLEVEL%

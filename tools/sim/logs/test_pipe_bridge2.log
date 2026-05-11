@@ -1,0 +1,5 @@
+[bridge] pipe=\\.\pipe\PDR16_AT_TESTPIPE2
+[bridge] firmware=C:\Users\pdr0663\PDR-16_AT\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_AT_TESTPIPE2
+[bridge] Tera Term connected
+[bridge] avrsim starting
