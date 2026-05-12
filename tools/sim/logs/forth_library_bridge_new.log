@@ -1,0 +1,2220 @@
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:uart->host] s
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:host->uart] \ ANSI terminal control core and packed-color helpers.
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] A
+[bridge:uart->host] N
+[bridge:uart->host] S
+[bridge:uart->host] I
+[bridge:uart->host]  
+[bridge:uart->host] t
+[bridge] WriteFile failed: 232
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:uart->host] s
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:host->uart] \ ANSI terminal control core and packed-color helpers.
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] A
+[bridge:uart->host] N
+[bridge:uart->host] S
+[bridge:host->uart] 
+[bridge:uart->host] I
+[bridge:uart->host]  
+[bridge:uart->host] t
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] m
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] a
+[bridge:uart->host] l
+[bridge:uart->host]  
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:uart->host] n
+[bridge:uart->host] t
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] l
+[bridge:uart->host]  
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] e
+[bridge:uart->host]  
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:host->uart] : ESC 27 EMIT ;
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] p
+[bridge:uart->host] a
+[bridge:uart->host] c
+[bridge:uart->host] k
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host] -
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:uart->host] l
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host]  
+[bridge:uart->host] h
+[bridge:uart->host] e
+[bridge:uart->host] l
+[bridge:uart->host] p
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] s
+[bridge:uart->host] .
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:host->uart] 
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] :
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host] C
+[bridge:host->uart] : CSI ESC ." [" ;
+[bridge:uart->host]  
+[bridge:uart->host] 2
+[bridge:uart->host] 7
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] M
+[bridge:uart->host] I
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] ;
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:host->uart] 
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] :
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] S
+[bridge:uart->host] I
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host] C
+[bridge:uart->host]  
+[bridge:uart->host] .
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] [
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] ;
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:host->uart] \ BEGIN GENERATED ANSI TABLES
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] B
+[bridge:uart->host] E
+[bridge:uart->host] G
+[bridge:uart->host] I
+[bridge:uart->host] N
+[bridge:uart->host]  
+[bridge:uart->host] G
+[bridge:uart->host] E
+[bridge:uart->host] N
+[bridge:uart->host] E
+[bridge:uart->host] R
+[bridge:uart->host] A
+[bridge:uart->host] T
+[bridge:uart->host] E
+[bridge:uart->host] D
+[bridge:uart->host]  
+[bridge:uart->host] A
+[bridge:uart->host] N
+[bridge:uart->host] S
+[bridge:uart->host] I
+[bridge:uart->host]  
+[bridge:uart->host] T
+[bridge:uart->host] A
+[bridge:uart->host] B
+[bridge:uart->host] L
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:host->uart] \ Generated by V5/Simulator/generate_ansi_tables.py.
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] G
+[bridge:uart->host] e
+[bridge:host->uart] \ Packed hues 0..11 use natural nearest ANSI 6x6x6 mapping.
+[bridge:uart->host] n
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] a
+[bridge:uart->host] t
+[bridge:uart->host] e
+[bridge:host->uart] \ Hue 15 maps to a 16-level neutral grayscale ramp using (S << 2) | L.
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] V
+[bridge:host->uart] \ Reserved hues 12..14 currently fall back to ANSI index 016.
+[bridge:uart->host] 5
+[bridge:uart->host] /
+[bridge:uart->host] S
+[bridge:uart->host] i
+[bridge:uart->host] m
+[bridge:uart->host] u
+[bridge:uart->host] l
+[bridge:uart->host] a
+[bridge:uart->host] t
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] /
+[bridge:uart->host] g
+[bridge:uart->host] e
+[bridge:uart->host] n
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] a
+[bridge:uart->host] t
+[bridge:uart->host] e
+[bridge:uart->host] _
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] _
+[bridge:uart->host] t
+[bridge:uart->host] a
+[bridge:uart->host] b
+[bridge:uart->host] l
+[bridge:uart->host] e
+[bridge:uart->host] s
+[bridge:uart->host] .
+[bridge:uart->host] p
+[bridge:uart->host] y
+[bridge:uart->host] .
+[bridge:uart->host]  
+[bridge:host->uart] 
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] P
+[bridge:uart->host] a
+[bridge:uart->host] c
+[bridge:uart->host] k
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] h
+[bridge:uart->host] u
+[bridge:uart->host] e
+[bridge:uart->host] s
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] .
+[bridge:uart->host] e
+[bridge:uart->host] n
+[bridge:uart->host] S
+[bridge:uart->host] a
+[bridge:uart->host] H
+[bridge:uart->host] p
+[bridge:uart->host] -
+[bridge:uart->host] t
+[bridge:uart->host] c
+[bridge:uart->host] u
+[bridge:uart->host] <
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:host->uart] CREATE COLOR>D100 256 ALLOT
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] .
+[bridge:uart->host] t
+[bridge:uart->host] b
+[bridge:uart->host] S
+[bridge:uart->host] 1
+[bridge:uart->host]  
+[bridge:uart->host] d
+[bridge:host->uart] S" 1110211022102211111021102210222" COLOR>D100 0 + SWAP CMOVE
+[bridge:uart->host] .
+[bridge:uart->host] t
+[bridge:uart->host] b
+[bridge:uart->host] S
+[bridge:uart->host] 1
+[bridge:uart->host]  
+[bridge:uart->host] ?
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] R
+[bridge:uart->host] E
+[bridge:uart->host] A
+[bridge:uart->host] T
+[bridge:uart->host] E
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] O
+[bridge:host->uart] S" 1111121112211222111101110111011" COLOR>D100 31 + SWAP CMOVE
+[bridge:uart->host] L
+[bridge:uart->host] O
+[bridge:uart->host] R
+[bridge:uart->host] >
+[bridge:uart->host] D
+[bridge:uart->host] 1
+[bridge:host->uart] S" 1011001000100010001100100010001" COLOR>D100 62 + SWAP CMOVE
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] 2
+[bridge:uart->host] 5
+[bridge:uart->host] 6
+[bridge:host->uart] S" 0001100100010001000110010001000" COLOR>D100 93 + SWAP CMOVE
+[bridge:uart->host]  
+[bridge:uart->host] A
+[bridge:uart->host] L
+[bridge:uart->host] L
+[bridge:uart->host] O
+[bridge:uart->host] T
+[bridge:host->uart] S" 1000110010001000100011001100110" COLOR>D100 124 + SWAP CMOVE
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:host->uart] S" 0110011102110221022211110211022" COLOR>D100 155 + SWAP CMOVE
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:host->uart] S" 1022110000000000000000000000000" COLOR>D100 186 + SWAP CMOVE
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:host->uart] S" 0000000000000000000000022222222" COLOR>D100 217 + SWAP CMOVE
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] "
+[bridge:uart->host] C
+[bridge:host->uart] S" 22222222" COLOR>D100 248 + SWAP CMOVE
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:host->uart] PRIVATE
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] >
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] O
+[bridge:host->uart] 
+[bridge:uart->host] 6
+[bridge:uart->host] C
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] S
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] L
+[bridge:uart->host] 5
+[bridge:uart->host] C
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] D
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] O
+[bridge:uart->host] 2
+[bridge:uart->host] P
+[bridge:uart->host]  
+[bridge:host->uart] CREATE COLOR>D10 256 ALLOT
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] A
+[bridge:uart->host] P
+[bridge:uart->host] V
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge] WriteFile failed: 232
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:uart->host] s
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] CreateNamedPipe failed: 231
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0_20880_639141736957520667
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_20880_639141736957520667
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:uart->host] s
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0_21464_639141739246799486
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_21464_639141739246799486
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:host->uart] \ ANSI terminal control core and packed-color helpers.
+[bridge:uart->host] s
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] A
+[bridge:uart->host] N
+[bridge:uart->host] S
+[bridge:uart->host] I
+[bridge:uart->host]  
+[bridge:uart->host] t
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] m
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] a
+[bridge:uart->host] l
+[bridge:uart->host]  
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:uart->host] n
+[bridge:host->uart] 
+[bridge:uart->host] t
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] l
+[bridge:uart->host]  
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] e
+[bridge:uart->host]  
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:host->uart] : ESC 27 EMIT ;
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] p
+[bridge:uart->host] a
+[bridge:uart->host] c
+[bridge:uart->host] k
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host] -
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:uart->host] l
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host]  
+[bridge:uart->host] h
+[bridge:uart->host] e
+[bridge:uart->host] l
+[bridge:host->uart] 
+[bridge:uart->host] p
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] s
+[bridge:uart->host] .
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] :
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host] C
+[bridge:uart->host]  
+[bridge:uart->host] 2
+[bridge:uart->host] 7
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] M
+[bridge:uart->host] I
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] ;
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:host->uart] : CSI ESC ." [" ;
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] :
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] S
+[bridge:uart->host] I
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host] C
+[bridge:uart->host]  
+[bridge:uart->host] .
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] [
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] ;
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:host->uart] 
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0_19668_639141740590567628
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_19668_639141740590567628
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:host->uart] \ ANSI terminal control core and packed-color helpers.
+[bridge:uart->host] s
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] A
+[bridge:uart->host] N
+[bridge:uart->host] S
+[bridge:uart->host] I
+[bridge:uart->host]  
+[bridge:uart->host] t
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] m
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] a
+[bridge:uart->host] l
+[bridge:uart->host]  
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:host->uart] 
+[bridge:uart->host] n
+[bridge:uart->host] t
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] l
+[bridge:uart->host]  
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] e
+[bridge:uart->host]  
+[bridge:uart->host] a
+[bridge:host->uart] : ESC 27 EMIT ;
+[bridge:uart->host] n
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] p
+[bridge:uart->host] a
+[bridge:uart->host] c
+[bridge:uart->host] k
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host] -
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:host->uart] 
+[bridge:uart->host] l
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host]  
+[bridge:uart->host] h
+[bridge:uart->host] e
+[bridge:uart->host] l
+[bridge:uart->host] p
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] s
+[bridge:host->uart] : CSI ESC ." [" ;
+[bridge:uart->host] .
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] :
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host] C
+[bridge:uart->host]  
+[bridge:uart->host] 2
+[bridge:uart->host] 7
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] M
+[bridge:host->uart] 
+[bridge:uart->host] I
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] ;
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:host->uart] \ BEGIN GENERATED ANSI TABLES
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] :
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] S
+[bridge:uart->host] I
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host] C
+[bridge:uart->host]  
+[bridge:uart->host] .
+[bridge:host->uart] \ Generated by V5/Simulator/generate_ansi_tables.py.
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] [
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] ;
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] B
+[bridge:uart->host] E
+[bridge:uart->host] G
+[bridge:uart->host] I
+[bridge:host->uart] \ Packed hues 0..11 use natural nearest ANSI 6x6x6 mapping.
+[bridge:uart->host] N
+[bridge:uart->host]  
+[bridge:uart->host] G
+[bridge:uart->host] E
+[bridge:uart->host] N
+[bridge:uart->host] E
+[bridge:uart->host] R
+[bridge:uart->host] A
+[bridge:uart->host] T
+[bridge:uart->host] E
+[bridge:uart->host] D
+[bridge:uart->host]  
+[bridge:host->uart] \ Hue 15 maps to a 16-level neutral grayscale ramp using (S << 2) | L.
+[bridge:uart->host] A
+[bridge:uart->host] N
+[bridge:uart->host] S
+[bridge:uart->host] I
+[bridge:uart->host]  
+[bridge:uart->host] T
+[bridge:uart->host] A
+[bridge:uart->host] B
+[bridge:uart->host] L
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:host->uart] \ Reserved hues 12..14 currently fall back to ANSI index 016.
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] G
+[bridge:uart->host] e
+[bridge:uart->host] n
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] a
+[bridge:uart->host] t
+[bridge:uart->host] e
+[bridge:host->uart] 
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] V
+[bridge:uart->host] 5
+[bridge:uart->host] /
+[bridge:uart->host] S
+[bridge:uart->host] i
+[bridge:uart->host] m
+[bridge:host->uart] CREATE COLOR>D100 256 ALLOT
+[bridge:uart->host] u
+[bridge:uart->host] l
+[bridge:uart->host] a
+[bridge:uart->host] t
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] /
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:host->uart] S" 1110211022102211111021102210222" COLOR>D100 0 + SWAP CMOVE
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] P
+[bridge:uart->host] a
+[bridge:uart->host] c
+[bridge:uart->host] k
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:host->uart] S" 1111121112211222111101110111011" COLOR>D100 31 + SWAP CMOVE
+[bridge:uart->host] n
+[bridge:uart->host] S
+[bridge:uart->host] a
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] H
+[bridge:uart->host] u
+[bridge:uart->host] e
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host]  
+[bridge:host->uart] S" 1011001000100010001100100010001" COLOR>D100 62 + SWAP CMOVE
+[bridge:uart->host] l
+[bridge:uart->host] r
+[bridge:uart->host] a
+[bridge:uart->host] s
+[bridge:uart->host]  
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] R
+[bridge:uart->host] e
+[bridge:uart->host] s
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] C
+[bridge:uart->host] R
+[bridge:uart->host] E
+[bridge:uart->host] A
+[bridge:uart->host] T
+[bridge:uart->host] E
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] O
+[bridge:uart->host] L
+[bridge:uart->host] O
+[bridge:host->uart] S" 0001100100010001000110010001000" COLOR>D100 93 + SWAP CMOVE
+[bridge:uart->host] R
+[bridge:uart->host] >
+[bridge:uart->host] D
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] 2
+[bridge:uart->host] 5
+[bridge:uart->host] 6
+[bridge:uart->host]  
+[bridge:uart->host] L
+[bridge:host->uart] S" 1000110010001000100011001100110" COLOR>D100 124 + SWAP CMOVE
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] "
+[bridge:uart->host] 1
+[bridge:uart->host] A
+[bridge:uart->host] S
+[bridge:host->uart] S" 0110011102110221022211110211022" COLOR>D100 155 + SWAP CMOVE
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] D
+[bridge:uart->host] S
+[bridge:host->uart] S" 1022110000000000000000000000000" COLOR>D100 186 + SWAP CMOVE
+[bridge] XOFF from target
+[bridge:uart->host]  
+[bridge:uart->host] L
+[bridge:host->uart] S" 0000000000000000000000022222222" COLOR>D100 217 + SWAP CMOVE
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] ?
+[bridge:uart->host]  
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] D
+[bridge:uart->host] S
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:host->uart] S" 22222222" COLOR>D100 248 + SWAP CMOVE
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] D
+[bridge:uart->host] S
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:host->uart] PRIVATE
+[bridge:uart->host] D
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:host->uart] 
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] D
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:host->uart] CREATE COLOR>D10 256 ALLOT
+[bridge:uart->host] 2
+[bridge:uart->host]  
+[bridge:uart->host] P
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:host->uart] S" 8738166810681092883927792179210" COLOR>D10 0 + SWAP CMOVE
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] O
+[bridge:uart->host] L
+[bridge:uart->host] O
+[bridge:uart->host] R
+[bridge:uart->host] >
+[bridge:host->uart] S" 3884028802280222485069416951695" COLOR>D10 31 + SWAP CMOVE
+[bridge:uart->host] D
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] A
+[bridge:uart->host] P
+[bridge:uart->host] R
+[bridge:uart->host] I
+[bridge:uart->host] V
+[bridge:uart->host] A
+[bridge:uart->host] T
+[bridge:uart->host] E
+[bridge:host->uart] S" 1751725742584228435172574258422" COLOR>D10 62 + SWAP CMOVE
+[bridge] XOFF from target
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge] WriteFile failed: 232
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0_18076_639141746619170926
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_18076_639141746619170926
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:uart->host] s
+[bridge] XOFF from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0_7576_639141749455735637
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli-run_2539211647\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_7576_639141749455735637
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:uart->host] s
+[bridge] XOFF from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0_18408_639141751252455647
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli-run_2598013048\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_18408_639141751252455647
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:uart->host] s
+[bridge] XOFF from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XON from target
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0_11768_639141752044545767
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli-run_2623810204\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_11768_639141752044545767
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:uart->host] s
+[bridge] XOFF from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XON from target
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0_3120_639141753695476977
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli-run_267743470\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_3120_639141753695476977
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:uart->host] s
+[bridge] XOFF from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XON from target
+[bridge:host->uart] \ ANSI terminal control core and packed-color helpers.
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] A
+[bridge:uart->host] N
+[bridge:uart->host] S
+[bridge:uart->host] I
+[bridge:uart->host]  
+[bridge:uart->host] t
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] m
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] a
+[bridge:uart->host] l
+[bridge:uart->host]  
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:uart->host] n
+[bridge:uart->host] t
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] l
+[bridge:uart->host]  
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] e
+[bridge:uart->host]  
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] p
+[bridge:uart->host] a
+[bridge:uart->host] c
+[bridge:uart->host] k
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host] -
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:uart->host] l
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host]  
+[bridge:uart->host] h
+[bridge:uart->host] e
+[bridge:uart->host] l
+[bridge:uart->host] p
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] s
+[bridge:uart->host] .
+[bridge] XOFF from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XON from target
+[bridge:host->uart] 
+[bridge] XOFF from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XON from target
+[bridge:host->uart] : ESC 27 EMIT ;
+[bridge:uart->host] :
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host] C
+[bridge:uart->host]  
+[bridge:uart->host] 2
+[bridge:uart->host] 7
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] M
+[bridge:uart->host] I
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] ;
+[bridge] XOFF from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge] WriteFile failed: 232
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0_21412_639141755799500878
+[bridge] firmware=C:\Users\pdr0663\PDR-16_XT\firmware\mega\pdr_vm\.build-cli-run_2746310392\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_21412_639141755799500878
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:host->uart] \ 04-ansi.fs
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 4
+[bridge:uart->host] -
+[bridge:uart->host] a
+[bridge:uart->host] n
+[bridge:uart->host] s
+[bridge:uart->host] i
+[bridge:uart->host] .
+[bridge:uart->host] f
+[bridge:uart->host] s
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 

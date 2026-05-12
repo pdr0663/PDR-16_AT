@@ -238,15 +238,50 @@ static void uart_pipe_flush_to_host(uart_pipe_t *bridge) {
       buffer[count++] = uart_pipe_fifo_read(&bridge->avr_to_host);
     }
 
-    DWORD written = 0;
-    if (!WriteFile(bridge->pipe_handle, buffer, (DWORD)count, &written, NULL)) {
-      log_line(bridge->log, "[bridge] WriteFile failed: %lu", GetLastError());
-      break;
+    size_t start = 0;
+    for (size_t i = 0; i < count; ++i) {
+      uint8_t byte = buffer[i];
+      if (byte == 0x11u || byte == 0x13u) {
+        if (i > start) {
+          DWORD written = 0;
+          if (!WriteFile(bridge->pipe_handle, &buffer[start], (DWORD)(i - start), &written, NULL)) {
+            log_line(bridge->log, "[bridge] WriteFile failed: %lu", GetLastError());
+            return;
+          }
+          log_bytes(bridge->log, "[bridge:uart->host]", &buffer[start], written);
+          if (written < (DWORD)(i - start)) {
+            return;
+          }
+        }
+        {
+          DWORD written = 0;
+          uint8_t ctrl = byte;
+          if (!WriteFile(bridge->pipe_handle, &ctrl, 1, &written, NULL)) {
+            log_line(bridge->log, "[bridge] WriteFile failed: %lu", GetLastError());
+            return;
+          }
+          if (written < 1) {
+            return;
+          }
+        }
+        bridge->xon = (byte == 0x11u) ? 1 : 0;
+        log_line(bridge->log, byte == 0x11u ? "[bridge] XON from target" : "[bridge] XOFF from target");
+        start = i + 1;
+        continue;
+      }
     }
 
-    log_bytes(bridge->log, "[bridge:uart->host]", buffer, written);
-    if (written < count) {
-      break;
+    if (start < count) {
+      DWORD written = 0;
+      if (!WriteFile(bridge->pipe_handle, &buffer[start], (DWORD)(count - start), &written, NULL)) {
+        log_line(bridge->log, "[bridge] WriteFile failed: %lu", GetLastError());
+        break;
+      }
+
+      log_bytes(bridge->log, "[bridge:uart->host]", &buffer[start], written);
+      if (written < (DWORD)(count - start)) {
+        break;
+      }
     }
   }
 }

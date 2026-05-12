@@ -1242,6 +1242,12 @@ dw(['doLIT', BKSPP, 'EMIT'])
 label('BACK1')
 dw(['EXIT'])
 
+colon('XOFF', [], c='(-- )')
+dw(['doLIT', 19, 'EMIT', 'EXIT'])
+
+colon('XON', [], c='(-- )')
+dw(['doLIT', 17, 'EMIT', 'EXIT'])
+
 colon('TAP', [], c='(bot eot cur c -- bot eot cur)')
 dw(['DUP', 'EMIT', 'OVER', 'C!'])
 dw(['doLIT', 1, '+', 'EXIT'])
@@ -1259,7 +1265,7 @@ dw(['DROP', 'EXIT'])
 label('KTAP1')
 dw(['^H', 'EXIT'])
 label('KTAP2')
-dw(['DROP', 'SWAP', 'DROP', 'DUP', 'EXIT'])
+dw(['XOFF', 'DROP', 'SWAP', 'DROP', 'DUP', 'EXIT'])
 
 colon('accept', [], c='(b u -- b u)')
 dw(['OVER', '+', 'OVER'])
@@ -1281,7 +1287,7 @@ colon('EXPECT', ['accept', 'SPAN', '!', 'DROP', 'EXIT'], c='(b u --)')
 
 colon('QUERY', [], c='(--)')
 dw(['TIB', 'doLIT', TIBS, 'EXPECT', 'SPAN', '@', '#TIB', '!'])
-dw(['doLIT', 0, '>IN', '!', 'EXIT'])
+dw(['XON', 'doLIT', 0, '>IN', '!', 'EXIT'])
 
 # Error handling
 colon('CATCH', [], c='(ca -- err#/0)')
@@ -1471,7 +1477,7 @@ dw(['doLIT', '.OK', 'XOR'])
 dw(['?branch', 'QUIT4'])
 dw(['doLIT', ERR, 'EMIT'])
 label('QUIT4')
-dw(['PRESET'])
+dw(['PRESET', 'XON'])
 dw(['branch', 'QUIT1'])
 
 # Interpreter and compiler

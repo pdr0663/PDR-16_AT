@@ -40,10 +40,12 @@ exit /b 1
 :build_new
 set "BUILD_ARGS=--ide new --no-pause"
 if defined SKIP_IMAGE set "BUILD_ARGS=%BUILD_ARGS% --skip-image"
+set "BUILD_DIR=%REPO_ROOT%\firmware\mega\pdr_vm\.build-cli-run_%RANDOM%%RANDOM%"
+set "BUILD_ARGS=%BUILD_ARGS% --build-dir %BUILD_DIR%"
 call "%SCRIPT_DIR%build_mega_vm_firmware.cmd" %BUILD_ARGS%
 if errorlevel 1 exit /b %ERRORLEVEL%
-set "FIRMWARE_PATH=%REPO_ROOT%\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.elf"
-if not exist "%FIRMWARE_PATH%" set "FIRMWARE_PATH=%REPO_ROOT%\firmware\mega\pdr_vm\.build-cli\pdr_vm.ino.hex"
+set "FIRMWARE_PATH=%BUILD_DIR%\pdr_vm.ino.elf"
+if not exist "%FIRMWARE_PATH%" set "FIRMWARE_PATH=%BUILD_DIR%\pdr_vm.ino.hex"
 goto compile
 
 :build_old

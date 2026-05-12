@@ -5,6 +5,7 @@ set "SCRIPT_DIR=%~dp0"
 set "REPO_ROOT=%SCRIPT_DIR%..\..\.."
 set "SKETCH_DIR=%REPO_ROOT%\firmware\mega\pdr_vm"
 set "BUILD_DIR="
+set "CUSTOM_BUILD_DIR="
 set "IMAGE_BUILDER=%SCRIPT_DIR%Other\build_forth_image.cmd"
 set "ARDUINO_DATA_DIR=%LOCALAPPDATA%\Arduino15"
 set "FQBN=arduino:avr:mega"
@@ -33,6 +34,16 @@ if /I "%~1"=="--ide" (
   shift
   goto parse_args
 )
+if /I "%~1"=="--build-dir" (
+  if "%~2"=="" (
+    echo Missing value for --build-dir.
+    exit /b 1
+  )
+  set "CUSTOM_BUILD_DIR=%~2"
+  shift
+  shift
+  goto parse_args
+)
 if /I "%~1"=="--no-pause" (
   set "NO_PAUSE=1"
   shift
@@ -49,6 +60,10 @@ if /I "%IDE_MODE%"=="new" (
   set "BUILD_DIR=%SKETCH_DIR%\.build-cli"
   set "ARDUINO_DATA_DIR=%LOCALAPPDATA%\Arduino15"
   set "ARDUINO_TOOL=arduino-cli"
+)
+
+if defined CUSTOM_BUILD_DIR (
+  set "BUILD_DIR=%CUSTOM_BUILD_DIR%"
 )
 if /I "%IDE_MODE%"=="old" (
   set "IDE_DIR=%SCRIPT_DIR%..\ide\old"
