@@ -6,8 +6,8 @@ if defined ARDUINO_CLI_EXE (
     echo %ARDUINO_CLI_EXE%
     exit /b 0
   )
-  echo ARDUINO_CLI_EXE is set but does not exist:
-  echo   "%ARDUINO_CLI_EXE%"
+  >&2 echo ARDUINO_CLI_EXE is set but does not exist:
+  >&2 echo   "%ARDUINO_CLI_EXE%"
   exit /b 1
 )
 
@@ -22,6 +22,6 @@ for /f "delims=" %%I in ('where arduino-cli.exe 2^>nul') do (
   exit /b 0
 )
 
-echo Could not find arduino-cli.exe.
-echo Install Arduino CLI, install Arduino IDE, or set ARDUINO_CLI_EXE.
+>&2 echo Could not find arduino-cli.exe.
+>&2 echo Install Arduino CLI, install Arduino IDE, or set ARDUINO_CLI_EXE.
 exit /b 1

@@ -1,0 +1,17 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\variants\\mega"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Paul.Riley\\PDR-16_XT\\firmware\\mega\\pdr_vm\\.build-legacy\\sketch\\pdr_vm.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

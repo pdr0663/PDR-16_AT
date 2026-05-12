@@ -1,0 +1,517 @@
+\ 09-forth-commander.fs
+\ Forth Commander browser enumeration layer.
+\
+\ This source builds the commander-facing query layer on top of the existing
+\ dictionary/kernel helpers. It keeps the browser state opaque, preserves the
+\ newest-first linked-list order used by the dictionary, and exposes the row
+\ metadata needed by the UI.
+
+VOCABULARY FORTH-COMMANDER
+FORTH-COMMANDER DEFINITIONS
+
+: FCOMMANDER FCM-INIT FCM-RUN ;
+: FCM-RUN ;
+
+\ Browser kind codes. 0 is reserved for the synthetic ".." row.
+: FC-KIND-UP 0 ;
+: FC-KIND-VOCAB 1 ;
+: FC-KIND-BUCKET 2 ;
+: FC-KIND-PRIM 3 ;
+: FC-KIND-COLON 4 ;
+: FC-KIND-HIDDEN 5 ;
+
+\ Browser contexts are small records:
+\   0 level
+\   1 selection index
+\   2 parent context
+\   3 current vocabulary xt
+\   4 current bucket ordinal within the populated bucket list
+
+CREATE FCM-CTX-POOL 256 5 CELLS * ALLOT
+VARIABLE FCM-CTX-FREE
+VARIABLE FCM-CTX-END
+VARIABLE FCM-ROOT
+
+VARIABLE FCM-PTR
+VARIABLE FCM-LIMIT
+VARIABLE FCM-COUNT
+VARIABLE FCM-SLOT
+VARIABLE FCM-TMP1
+VARIABLE FCM-TMP2
+VARIABLE FCM-TMP3
+
+CREATE FCM-CHAR-BUF 2 ALLOT
+CREATE FCM-PATH-BUF 128 ALLOT
+VARIABLE FCM-PATH-LEN
+VARIABLE FCM-COPY-SRC
+VARIABLE FCM-COPY-DST
+VARIABLE FCM-COPY-LEN
+
+: FCM-CTX-ZERO 5 CELLS 0 FILL ;
+
+: FCM-CTX-LEVEL ( ctx -- addr ) ;
+: FCM-CTX-SELECT ( ctx -- addr ) CELL+ ;
+: FCM-CTX-PARENT ( ctx -- addr ) 2 CELLS + ;
+: FCM-CTX-VOCAB ( ctx -- addr ) 3 CELLS + ;
+: FCM-CTX-BUCKET ( ctx -- addr ) 4 CELLS + ;
+
+: FCM-CTX-LEVEL@ FCM-CTX-LEVEL @ ;
+: FCM-CTX-SELECT@ FCM-CTX-SELECT @ ;
+: FCM-CTX-PARENT@ FCM-CTX-PARENT @ ;
+: FCM-CTX-VOCAB@ FCM-CTX-VOCAB @ ;
+: FCM-CTX-BUCKET@ FCM-CTX-BUCKET @ ;
+
+: FCM-CTX-LEVEL! SWAP FCM-CTX-LEVEL ! ;
+: FCM-CTX-SELECT! SWAP FCM-CTX-SELECT ! ;
+: FCM-CTX-PARENT! SWAP FCM-CTX-PARENT ! ;
+: FCM-CTX-VOCAB! SWAP FCM-CTX-VOCAB ! ;
+: FCM-CTX-BUCKET! SWAP FCM-CTX-BUCKET ! ;
+
+: FCM-INIT-POOL
+  FCM-CTX-POOL FCM-CTX-FREE !
+  FCM-CTX-POOL 256 5 CELLS * + FCM-CTX-END !
+;
+
+: FCM-NEW-CTX ( -- ctx|0 )
+  FCM-CTX-FREE @ DUP
+  FCM-CTX-END @ U< IF
+    DUP 5 CELLS + FCM-CTX-FREE !
+    EXIT
+  THEN
+  DROP 0
+;
+
+: FCM-VOCAB-AT ( i -- va|0 )
+  FCM-LIMIT !
+  CONTEXT @ FCM-PTR !
+  BEGIN
+    FCM-LIMIT @ 0= IF FCM-PTR @ EXIT THEN
+    FCM-PTR @ DUP 0= IF DROP 0 EXIT THEN
+    FCM-PTR @ CELL+ @ FCM-PTR !
+    FCM-LIMIT @ 1- FCM-LIMIT !
+  AGAIN
+;
+
+: FCM-LIST-COUNT ( head -- u )
+  FCM-PTR !
+  0 FCM-COUNT !
+  BEGIN
+    FCM-PTR @ DUP 0= IF DROP FCM-COUNT @ EXIT THEN
+    FCM-COUNT @ 1+ FCM-COUNT !
+    @ FCM-PTR !
+  AGAIN
+;
+
+: FCM-LIST-NTH ( head n -- node|0 )
+  FCM-COUNT !
+  FCM-PTR !
+  BEGIN
+    FCM-COUNT @ 0= IF FCM-PTR @ EXIT THEN
+    FCM-PTR @ DUP 0= IF DROP 0 EXIT THEN
+    @ FCM-PTR !
+    FCM-COUNT @ 1- FCM-COUNT !
+  AGAIN
+;
+
+: FCM-VOCAB-POPULATED# ( vocab -- u )
+  0 FCM-COUNT !
+  VOCAB>BUCKETS FCM-PTR !
+  0 FCM-SLOT !
+  BEGIN
+    FCM-SLOT @ 95 = IF FCM-COUNT @ EXIT THEN
+    FCM-PTR @ FCM-SLOT @ CELLS + @ ?DUP IF
+      DROP FCM-COUNT @ 1+ FCM-COUNT !
+    THEN
+    FCM-SLOT @ 1+ FCM-SLOT !
+  AGAIN
+;
+
+: FCM-VOCAB-BUCKET+1 ( vocab bucket -- slot+1|0 )
+  FCM-COUNT !
+  VOCAB>BUCKETS FCM-PTR !
+  0 FCM-SLOT !
+  BEGIN
+    FCM-SLOT @ 95 = IF 0 EXIT THEN
+    FCM-PTR @ FCM-SLOT @ CELLS + @ ?DUP IF
+      FCM-COUNT @ 0= IF
+        DROP FCM-SLOT @ 1+ EXIT
+      THEN
+      FCM-COUNT @ 1- FCM-COUNT !
+    THEN
+    FCM-SLOT @ 1+ FCM-SLOT !
+  AGAIN
+;
+
+: FCM-SLOT$ ( slot -- c-addr u )
+  32 + FCM-CHAR-BUF C!
+  FCM-CHAR-BUF 1
+;
+
+: FCM-BUCKET-HEAD ( vocab bucket -- head|0 )
+  SWAP FCM-TMP1 ! >R
+  FCM-TMP1 @ R> FCM-VOCAB-BUCKET+1 ?DUP IF
+    1- FCM-TMP1 @ VOCAB>BUCKETS SWAP CELLS + @ EXIT
+  THEN
+  0
+;
+
+: FCM-WORD-NODE ( vocab bucket word -- node|0 )
+  ROT ROT
+  FCM-TMP3 !
+  FCM-TMP1 !
+  FCM-TMP2 !
+  FCM-TMP1 @ FCM-TMP3 @ FCM-VOCAB-BUCKET+1 ?DUP IF
+    1- FCM-TMP1 @ VOCAB>BUCKETS SWAP CELLS + @
+    FCM-TMP2 @ FCM-LIST-NTH EXIT
+  THEN
+  0
+;
+
+: FCM-PATH-RESET 0 FCM-PATH-LEN ! ;
+
+: FCM-PATH-APPEND ( c-addr u -- )
+  FCM-COPY-LEN !
+  FCM-COPY-SRC !
+  FCM-PATH-BUF FCM-PATH-LEN @ + FCM-COPY-DST !
+  FCM-COPY-SRC @
+  FCM-COPY-DST @
+  FCM-COPY-LEN @
+  CMOVE
+  FCM-PATH-LEN @ FCM-COPY-LEN @ + FCM-PATH-LEN !
+;
+
+: FCM-MAKE-BUCKET-CTX ( parent vocab -- ctx )
+  FCM-TMP1 ! FCM-TMP2 !
+  FCM-NEW-CTX ?DUP 0= IF 2DROP 0 EXIT THEN
+  DUP FCM-CTX-ZERO
+  DUP 1 FCM-CTX-LEVEL!
+  DUP FCM-TMP2 @ FCM-CTX-PARENT!
+  DUP FCM-TMP1 @ FCM-CTX-VOCAB!
+  DUP 0 FCM-CTX-BUCKET!
+  DUP 0 FCM-CTX-SELECT!
+;
+
+: FCM-MAKE-WORD-CTX ( parent vocab bucket -- ctx )
+  FCM-TMP1 ! FCM-TMP2 ! FCM-TMP3 !
+  FCM-NEW-CTX ?DUP 0= IF 2DROP 0 EXIT THEN
+  DUP FCM-CTX-ZERO
+  DUP 2 FCM-CTX-LEVEL!
+  DUP FCM-TMP3 @ FCM-CTX-PARENT!
+  DUP FCM-TMP2 @ FCM-CTX-VOCAB!
+  DUP FCM-TMP1 @ FCM-CTX-BUCKET!
+  DUP 0 FCM-CTX-SELECT!
+;
+
+: FCM-ROOT-CTX ( -- ctx )
+  FCM-ROOT @ ?DUP IF EXIT THEN
+  FCM-NEW-CTX ?DUP 0= IF EXIT THEN
+  DUP FCM-CTX-ZERO
+  DUP 0 FCM-CTX-LEVEL!
+  DUP 0 FCM-CTX-PARENT!
+  DUP FCM-VOCAB-AT FCM-CTX-VOCAB!
+  DUP 0 FCM-CTX-BUCKET!
+  DUP 0 FCM-CTX-SELECT!
+  DUP FCM-ROOT !
+;
+
+: FCM-CTX-ROM? ( ctx -- flag )
+  FCM-CTX-VOCAB@ CODER U<
+;
+
+\ Public browser lifecycle.
+: FCM-INIT
+  FCM-INIT-POOL
+  0 FCM-ROOT !
+  FCM-ROOT-CTX DROP
+;
+
+: FC-ROOT-CTX FCM-ROOT-CTX ;
+
+: FC-UP ( ctx -- ctx' )
+  FCM-CTX-PARENT@
+;
+
+: FC-SELECT@ ( ctx -- index )
+  FCM-CTX-SELECT@
+;
+
+: FC-LEVEL@ ( ctx -- u )
+  FCM-CTX-LEVEL@
+;
+
+: FC-PARENT@ ( ctx -- ctx' | 0 )
+  FCM-CTX-PARENT@
+;
+
+: FC-SELECT! ( ctx index -- ctx )
+  >R
+  DUP FCM-CTX-LEVEL@ 0= IF
+    DUP R@ FCM-VOCAB-AT FCM-CTX-VOCAB!
+  THEN
+  DUP R> FCM-CTX-SELECT!
+;
+
+: FC-OPEN ( ctx index -- ctx' )
+  FC-SELECT!
+  DUP FCM-CTX-LEVEL@ 0= IF
+    DUP FCM-CTX-PARENT@ FCM-TMP1 !
+    DUP FCM-CTX-VOCAB@ FCM-TMP2 !
+    FCM-TMP2 @ 0= IF
+      FCM-CTX-PARENT@ EXIT
+    THEN
+    FCM-TMP1 @ FCM-TMP2 @ FCM-MAKE-BUCKET-CTX EXIT
+  THEN
+  DUP FCM-CTX-LEVEL@ 1 = IF
+    DUP FCM-CTX-SELECT@ 0= IF
+      FCM-CTX-PARENT@ EXIT
+    THEN
+    DUP FCM-CTX-PARENT@ FCM-TMP1 !
+    DUP FCM-CTX-VOCAB@ FCM-TMP2 !
+    DUP FCM-CTX-SELECT@ 1- FCM-TMP3 !
+    FCM-TMP2 @ FCM-TMP3 @ FCM-VOCAB-BUCKET+1 ?DUP IF
+      DROP
+      FCM-TMP1 @ FCM-TMP2 @ FCM-TMP3 @ FCM-MAKE-WORD-CTX EXIT
+    THEN
+    FCM-CTX-PARENT@ EXIT
+  THEN
+  FCM-CTX-PARENT@
+;
+
+: FC-VOCAB-COUNT ( -- u )
+  CONTEXT @ FCM-LIST-COUNT
+;
+
+: FC-VOCAB-NAME$ ( i -- c-addr u )
+  FCM-VOCAB-AT ?DUP IF >NAME COUNT EXIT THEN
+  0 0
+;
+
+: FC-VOCAB-POPULATED# ( i -- u )
+  FCM-VOCAB-AT ?DUP IF FCM-VOCAB-POPULATED# EXIT THEN
+  0
+;
+
+: FC-VOCAB-ROM? ( i -- flag )
+  FCM-VOCAB-AT ?DUP IF CODER U< EXIT THEN
+  0
+;
+
+: FC-VOCAB-RAM? ( i -- flag )
+  FC-VOCAB-ROM? 0=
+;
+
+: FC-BUCKET-COUNT ( vocab -- u )
+  FCM-VOCAB-POPULATED#
+;
+
+: FC-BUCKET-NAME$ ( vocab bucket -- c-addr u )
+  FCM-VOCAB-BUCKET+1 ?DUP IF
+    1- FCM-SLOT$
+    EXIT
+  THEN
+  0 0
+;
+
+: FC-BUCKET-WORDS# ( vocab bucket -- u )
+  FCM-BUCKET-HEAD FCM-LIST-COUNT
+;
+
+: FC-BUCKET-POPULATED? ( vocab bucket -- flag )
+  FCM-VOCAB-BUCKET+1 ?DUP IF
+    DROP -1 EXIT
+  THEN
+  0
+;
+
+: FC-BUCKET-ROM? ( vocab bucket -- flag )
+  DROP CODER U<
+;
+
+: FC-BUCKET-RAM? ( vocab bucket -- flag )
+  FC-BUCKET-ROM? 0=
+;
+
+: FC-WORD-COUNT ( vocab bucket -- u )
+  FCM-BUCKET-HEAD FCM-LIST-COUNT
+;
+
+: FC-WORD-NAME$ ( vocab bucket word -- c-addr u )
+  FCM-WORD-NODE ?DUP IF HEADER>NA COUNT EXIT THEN
+  0 0
+;
+
+: FC-WORD-XT ( vocab bucket word -- xt )
+  FCM-WORD-NODE ?DUP IF HEADER>NA NAME> EXIT THEN
+  0
+;
+
+: FC-WORD-PRIM? ( vocab bucket word -- flag )
+  FCM-WORD-NODE ?DUP IF
+    HEADER>NA NAME> XT_BASE U< EXIT
+  THEN
+  0
+;
+
+: FC-WORD-COLON? ( vocab bucket word -- flag )
+  FC-WORD-PRIM? 0=
+;
+
+: FC-WORD-HIDDEN? ( vocab bucket word -- flag )
+  FCM-WORD-NODE ?DUP IF
+    HEADER>NA @ PRIVV AND EXIT
+  THEN
+  0
+;
+
+: FC-WORD-SEE? ( vocab bucket word -- flag )
+  FC-WORD-COLON?
+;
+
+: FC-WORD-FORGET? ( vocab bucket word -- flag )
+  FC-WORD-RAM?
+;
+
+: FC-WORD-ROM? ( vocab bucket word -- flag )
+  FCM-WORD-NODE ?DUP IF
+    HEADER>NA NAME> CODER U< EXIT
+  THEN
+  0
+;
+
+: FC-WORD-RAM? ( vocab bucket word -- flag )
+  FC-WORD-ROM? 0=
+;
+
+: FC-ROWS ( ctx -- u )
+  DUP FCM-CTX-LEVEL@ 0= IF
+    DROP FC-VOCAB-COUNT EXIT
+  THEN
+  DUP FCM-CTX-LEVEL@ 1 = IF
+    DROP FCM-CTX-VOCAB@ FC-BUCKET-COUNT 1+ EXIT
+  THEN
+  DROP FCM-CTX-VOCAB@ FCM-CTX-BUCKET@ FC-WORD-COUNT 1+
+;
+
+: FC-ROW-NAME$ ( ctx index -- c-addr u )
+  OVER FCM-CTX-LEVEL@ 0= IF
+    FC-VOCAB-NAME$
+    EXIT
+  THEN
+  DUP 0= IF
+    DROP S" .."
+    EXIT
+  THEN
+  OVER FCM-CTX-LEVEL@ 1 = IF
+    1- FC-BUCKET-NAME$
+    EXIT
+  THEN
+  1- FC-WORD-NAME$
+;
+
+: FC-ROW-META ( ctx index -- u )
+  OVER FCM-CTX-LEVEL@ 0= IF
+    FC-VOCAB-POPULATED#
+    EXIT
+  THEN
+  DUP 0= IF
+    DROP 0
+    EXIT
+  THEN
+  OVER FCM-CTX-LEVEL@ 1 = IF
+    1- FC-BUCKET-WORDS#
+    EXIT
+  THEN
+  0
+;
+
+: FC-ROW-KIND ( ctx index -- kind )
+  OVER FCM-CTX-LEVEL@ 0= IF
+    FC-KIND-VOCAB EXIT
+  THEN
+  DUP 0= IF
+    DROP FC-KIND-UP EXIT
+  THEN
+  OVER FCM-CTX-LEVEL@ 1 = IF
+    FC-KIND-BUCKET EXIT
+  THEN
+  1- FC-WORD-HIDDEN? IF
+    FC-KIND-HIDDEN EXIT
+  THEN
+  1- FC-WORD-PRIM? IF
+    FC-KIND-PRIM EXIT
+  THEN
+  FC-KIND-COLON
+;
+
+: FC-ROW-ROM? ( ctx index -- flag )
+  OVER FCM-CTX-LEVEL@ 0= IF
+    FC-VOCAB-ROM? EXIT
+  THEN
+  DUP 0= IF
+    DROP FCM-CTX-VOCAB@ CODER U< EXIT
+  THEN
+  OVER FCM-CTX-LEVEL@ 1 = IF
+    1- FC-BUCKET-ROM? EXIT
+  THEN
+  1- FC-WORD-ROM?
+;
+
+: FC-ROW-RAM? ( ctx index -- flag )
+  FC-ROW-ROM? 0=
+;
+
+: FC-ROW-OPEN? ( ctx index -- flag )
+  OVER FCM-CTX-LEVEL@ 0= IF
+    FC-VOCAB-AT ?DUP IF DROP -1 ELSE 0 THEN
+    EXIT
+  THEN
+  DUP 0= IF
+    DROP -1
+    EXIT
+  THEN
+  OVER FCM-CTX-LEVEL@ 1 = IF
+    1- FC-BUCKET-POPULATED? EXIT
+  THEN
+  0
+;
+
+: FCM-PATH-AT-CTX ( ctx -- c-addr u )
+  FCM-PATH-RESET
+  FCM-TMP1 !
+  FCM-TMP1 @ FCM-CTX-VOCAB@ ?DUP IF
+    >NAME COUNT FCM-PATH-APPEND
+  THEN
+  FCM-TMP1 @ FCM-CTX-LEVEL@ 0= IF
+    FCM-PATH-BUF FCM-PATH-LEN @ EXIT
+  THEN
+  FCM-TMP1 @ FCM-CTX-SELECT@ 0= IF
+    FCM-TMP1 @ FCM-CTX-PARENT@ ?DUP IF
+      FCM-PATH-AT-CTX EXIT
+    THEN
+    FCM-PATH-BUF FCM-PATH-LEN @ EXIT
+  THEN
+  S" ->" FCM-PATH-APPEND
+  FCM-TMP1 @ FCM-CTX-LEVEL@ 1 = IF
+    FCM-TMP1 @ FCM-CTX-VOCAB@
+    FCM-TMP1 @ FCM-CTX-SELECT@ 1-
+    FC-BUCKET-NAME$
+    FCM-PATH-APPEND
+    FCM-PATH-BUF FCM-PATH-LEN @ EXIT
+  THEN
+  FCM-TMP1 @ FCM-CTX-VOCAB@
+  FCM-TMP1 @ FCM-CTX-BUCKET@
+  FC-BUCKET-NAME$
+  FCM-PATH-APPEND
+  S" ->" FCM-PATH-APPEND
+  FCM-TMP1 @ FCM-CTX-VOCAB@
+  FCM-TMP1 @ FCM-CTX-BUCKET@
+  FCM-TMP1 @ FCM-CTX-SELECT@
+  FC-WORD-NAME$
+  FCM-PATH-APPEND
+  FCM-PATH-BUF FCM-PATH-LEN @
+;
+
+: FC-PATH$ FCM-PATH-AT-CTX ;
+
+\ Keep the public entry points wired for the current scaffold.
+: FCM-RUN ;

@@ -17,6 +17,10 @@ Current entry points:
 - `build_forth_image.cmd`
   - Rebuilds the seeded Forth image and generated header from the Python
     source tree for phase 1.
+- `build_mega_vm_libraries.cmd`
+  - Rebuilds the firmware and replays `tools\forth\Forth Sources\build_order.txt`
+    into the live Mega VM over the named-pipe bridge. The script captures a
+    transcript of the compile session and probes `WORDS` at the end.
 - `build_mega_vm_firmware.cmd`
   - Rebuilds the current Forth image, then compiles the Arduino Mega firmware
     into `firmware/mega/pdr_vm/.build-cli` with `arduino-cli`.
@@ -27,9 +31,17 @@ Current entry points:
   - Launches the Windows UART harness against the current Mega firmware image.
 - `run_mega_vm_teraterm.cmd`
   - Builds the native named-pipe bridge, starts the UART harness, then opens Tera Term.
+- `run_mega_vm_teraterm_new.cmd`
+  - Explorer-friendly launcher for the Arduino IDE 2.x build output.
+- `run_mega_vm_teraterm_old.cmd`
+  - Explorer-friendly launcher for the Arduino IDE 1.8.x build output.
 - `build_mega_vm_pipe_bridge.cmd`
   - Builds the native Windows UART bridge used by the Tera Term launcher from
     `tools/sim/src/mega_vm_teraterm.c`.
+- `build_mega_vm_libraries_new.cmd`
+  - Explorer-friendly phase-2 launcher for the Arduino IDE 2.x build output.
+- `build_mega_vm_libraries_old.cmd`
+  - Explorer-friendly phase-2 launcher for the Arduino IDE 1.8.x build output.
 
 Current status by phase:
 
@@ -37,9 +49,9 @@ Current status by phase:
   - Implemented. The Python builder emits the seeded ROM header consumed by the
     Mega VM firmware.
 - Phase 2
-  - Partially implemented. The Windows firmware build and simulator launch
-    exist, but the automated "compile Forth libraries under the VM and save a
-    new Forth image" step is still the remaining major piece.
+  - Partially implemented. The Windows firmware build exists and the source
+    feed into the live VM is now scripted, but deterministic binary export of
+    the post-compile image is still the remaining major piece.
 - Phase 3
   - Conceptually supported once phase 2 can emit a replacement image. The same
     firmware build and Windows UART harness launch path should then run against
@@ -62,6 +74,37 @@ Note:
 - `--skip-image`
   - Reuse the existing generated Forth image and only recompile the Arduino
     sketch.
+- `--no-pause`
+  - Suppress the Explorer pause so higher-level wrappers can chain additional
+    steps.
+- `--ide new`
+  - Use the Arduino IDE 2.x / `arduino-cli` resolver under `tools/sim/ide/new/`.
+- `--ide old`
+  - Use the Arduino IDE 1.8.x / `arduino-builder` resolver under
+    `tools/sim/ide/old/`.
+
+`build_mega_vm_libraries.cmd` accepts:
+
+- `--skip-image`
+  - Reuse the current seeded image before replaying the library source list.
+- `--ide new`
+  - Use the Arduino IDE 2.x build output and the `arduino-cli` firmware path.
+- `--ide old`
+  - Use the Arduino IDE 1.8.x build output and the legacy firmware path.
+
+`run_mega_vm_teraterm.cmd` accepts:
+
+- `--ide new`
+  - Use `firmware/mega/pdr_vm/.build-cli`.
+- `--ide old`
+  - Use `firmware/mega/pdr_vm/.build-legacy`.
+
+Explorer-friendly explicit entry points:
+
+- `build_mega_vm_firmware_new.cmd`
+  - Hard-wired to the Arduino IDE 2.x path.
+- `build_mega_vm_firmware_old.cmd`
+  - Hard-wired to the Arduino IDE 1.8.x path.
 
 `build_and_run_mega_vm_simavr.cmd` accepts:
 
@@ -76,6 +119,17 @@ Arduino CLI resolution order:
 1. `ARDUINO_CLI_EXE`
 2. `%ProgramFiles%\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe`
 3. `where arduino-cli.exe`
+
+The active resolver now lives under:
+
+- `tools/sim/ide/new/resolve_arduino_cli.cmd`
+
+The legacy Arduino IDE 1.8.x support subtree is reserved at:
+
+- `tools/sim/ide/old/`
+
+The legacy resolver returns the installed Arduino IDE root, which the build
+wrapper uses to locate `arduino-builder.exe` and the bundled AVR toolchain.
 
 Tera Term is selected through either:
 

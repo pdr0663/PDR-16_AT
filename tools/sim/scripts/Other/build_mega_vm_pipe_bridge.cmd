@@ -2,7 +2,7 @@
 setlocal EnableExtensions
 
 set "SCRIPT_DIR=%~dp0"
-set "REPO_ROOT=%SCRIPT_DIR%..\..\.."
+set "REPO_ROOT=%SCRIPT_DIR%..\..\..\.."
 set "PORTABLE_ROOT=C:\avrsim-portable"
 set "GCC_EXE=%PORTABLE_ROOT%\msys64\mingw64\bin\gcc.exe"
 set "SIMAVR_INCLUDE=%PORTABLE_ROOT%\out\include"

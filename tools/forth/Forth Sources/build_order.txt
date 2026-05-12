@@ -2,3 +2,5 @@
 07-math.fs
 03-fstrings.fs
 08-editor.fs
+09-forth-commander.fs
+10-forth-commander-ui.fs
