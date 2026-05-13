@@ -1,4 +1,4 @@
 Please write the transcript of this chat to a file in the repo at:
 \docs\logs
-and show me some commit text here in the chat.
+and show me a dozen or so lines of commit text here in the chat.
 Also, write a handoff file in the repo so another chat can continue this work. Please make it lightweight, to minimize Codex messages.
