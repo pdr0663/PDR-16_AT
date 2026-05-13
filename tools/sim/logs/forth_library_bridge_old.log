@@ -2553,3 +2553,432 @@
 [bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_16676_639142286035543718
 [bridge] Tera Term connected
 [bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:host->uart] : ESC 27 EMIT ;
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] :
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host] C
+[bridge:uart->host]  
+[bridge:uart->host] 2
+[bridge:uart->host] 7
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] M
+[bridge:uart->host] I
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] ;
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:host->uart] : CSI ESC ." [" ;
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] :
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] S
+[bridge:uart->host] I
+[bridge:uart->host]  
+[bridge:uart->host] E
+[bridge:uart->host] S
+[bridge:uart->host] C
+[bridge:uart->host]  
+[bridge:uart->host] .
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] [
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] ;
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:host->uart] CREATE COLOR>D100 256 ALLOT
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] C
+[bridge:uart->host] R
+[bridge:uart->host] E
+[bridge:uart->host] A
+[bridge:uart->host] T
+[bridge:uart->host] E
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] O
+[bridge:uart->host] L
+[bridge:uart->host] O
+[bridge:uart->host] R
+[bridge:uart->host] >
+[bridge:uart->host] D
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] 2
+[bridge:uart->host] 5
+[bridge:uart->host] 6
+[bridge:uart->host]  
+[bridge:uart->host] A
+[bridge:uart->host] L
+[bridge:uart->host] L
+[bridge:uart->host] O
+[bridge:uart->host] T
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:host->uart] S" 1110211022102211111021102210222" COLOR>D100 0 + SWAP CMOVE
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] O
+[bridge:uart->host] L
+[bridge:uart->host] O
+[bridge:uart->host] R
+[bridge:uart->host] >
+[bridge:uart->host] D
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] +
+[bridge:uart->host]  
+[bridge:uart->host] S
+[bridge:uart->host] W
+[bridge:uart->host] A
+[bridge:uart->host] P
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] M
+[bridge:uart->host] O
+[bridge:uart->host] V
+[bridge:uart->host] E
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:host->uart] S" 1111121112211222111101110111011" COLOR>D100 31 + SWAP CMOVE
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 2
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] O
+[bridge:uart->host] L
+[bridge:uart->host] O
+[bridge:uart->host] R
+[bridge:uart->host] >
+[bridge:uart->host] D
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] 3
+[bridge:uart->host] 1
+[bridge:uart->host]  
+[bridge:uart->host] +
+[bridge:uart->host]  
+[bridge:uart->host] S
+[bridge:uart->host] W
+[bridge:uart->host] A
+[bridge:uart->host] P
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] M
+[bridge:uart->host] O
+[bridge:uart->host] V
+[bridge:uart->host] E
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:host->uart] S" 1011001000100010001100100010001" COLOR>D100 62 + SWAP CMOVE
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] O
+[bridge:uart->host] L
+[bridge:uart->host] O
+[bridge:uart->host] R
+[bridge:uart->host] >
+[bridge:uart->host] D
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] 6
+[bridge:uart->host] 2
+[bridge:uart->host]  
+[bridge:uart->host] +
+[bridge:uart->host]  
+[bridge:uart->host] S
+[bridge:uart->host] W
+[bridge:uart->host] A
+[bridge:uart->host] P
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] M
+[bridge:uart->host] O
+[bridge:uart->host] V
+[bridge:uart->host] E
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:host->uart] S" 0001100100010001000110010001000" COLOR>D100 93 + SWAP CMOVE
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] S
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host] "
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] O
+[bridge:uart->host] L
+[bridge:uart->host] O
+[bridge:uart->host] R
+[bridge:uart->host] >
+[bridge:uart->host] D
+[bridge:uart->host] 1
+[bridge:uart->host] 0
+[bridge:uart->host] 0
+[bridge:uart->host]  
+[bridge:uart->host] 9
+[bridge:uart->host] 3
+[bridge:uart->host]  
+[bridge:uart->host] +
+[bridge:uart->host]  
+[bridge:uart->host] S
+[bridge:uart->host] W
+[bridge:uart->host] A
+[bridge:uart->host] P
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] M
+[bridge:uart->host] O
+[bridge:uart->host] V
+[bridge:uart->host] E
+[bridge] XOFF from target
+[bridge] XON from target
