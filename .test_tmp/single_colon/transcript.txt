@@ -1,0 +1,8 @@
+﻿[bridge] connected to \\.\pipe\PDR16_XT_UART0_10944_639142263746390985
+
+=== C:\Users\Paul.Riley\PDR-16_XT\.test_tmp\single_colon\mini.fs ===
+
+PDR-16/XT Forth v4.0
+derived from eForth by C.H.Ting
+ ok
+: ESC 27 EMIT ;

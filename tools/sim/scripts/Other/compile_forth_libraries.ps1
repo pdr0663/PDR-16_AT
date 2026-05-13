@@ -6,10 +6,10 @@ param(
     [string]$BridgeLogPath,
     [string]$BuildOrderPath,
     [string]$TranscriptPath,
-    [int]$PromptTimeoutMs = 5000,
     [int]$QuietDrainMs = 300,
     [int]$InterLineDelayMs = 0,
-    [switch]$ProbeWords
+    [switch]$ProbeWords,
+    [switch]$TraceDrain
 )
 
 Set-StrictMode -Version Latest
@@ -98,32 +98,34 @@ function Drain-PipeOutput {
         [System.IO.Pipes.NamedPipeClientStream]$Pipe,
 
         [Parameter(Mandatory = $true)]
-        [int]$PromptTimeoutMs,
-
-        [Parameter(Mandatory = $true)]
         [int]$QuietDrainMs,
 
         [Parameter(Mandatory = $true)]
         [System.Text.StringBuilder]$ConsoleLineBuffer,
 
-        [switch]$RequireXon
+        [switch]$RequireXon,
+
+        [switch]$TraceDrain
     )
 
     $output = New-Object System.Text.StringBuilder
-    $deadline = [DateTime]::UtcNow.AddMilliseconds($PromptTimeoutMs)
     $quietDeadline = [DateTime]::UtcNow.AddMilliseconds($QuietDrainMs)
     $buffer = New-Object byte[] 4096
     $sawXon = $false
+    $pendingReadTask = $Pipe.ReadAsync($buffer, 0, $buffer.Length)
 
-    while ([DateTime]::UtcNow -lt $deadline) {
-        $readTask = $Pipe.ReadAsync($buffer, 0, $buffer.Length)
+    while ($true) {
         $waitTask = [System.Threading.Tasks.Task]::Delay(10)
-        $completed = [System.Threading.Tasks.Task]::WaitAny(@($readTask, $waitTask))
+        $completed = [System.Threading.Tasks.Task]::WaitAny(@($pendingReadTask, $waitTask))
 
         if ($completed -eq 0) {
-            $read = $readTask.Result
+            $read = $pendingReadTask.Result
             if ($read -gt 0) {
                 $chunk = [System.Text.Encoding]::UTF8.GetString($buffer, 0, $read)
+                if ($TraceDrain) {
+                    $hexBytes = (($buffer[0..($read - 1)] | ForEach-Object { '{0:X2}' -f $_ }) -join ' ')
+                    Write-Host ("[trace] read={0} xon={1} bytes={2}" -f $read, ($chunk.IndexOf([char]17) -ge 0), $hexBytes)
+                }
                 if ($chunk.IndexOf([char]17) -ge 0) {
                     $sawXon = $true
                 }
@@ -131,9 +133,9 @@ function Drain-PipeOutput {
                 [void]$output.Append($chunk)
                 Emit-ConsoleText -LineBuffer $ConsoleLineBuffer -Text $chunk
                 $quietDeadline = [DateTime]::UtcNow.AddMilliseconds($QuietDrainMs)
-                if ($RequireXon -and $sawXon) {
-                    break
-                }
+            }
+            $pendingReadTask = $Pipe.ReadAsync($buffer, 0, $buffer.Length)
+            if ($read -gt 0) {
                 continue
             }
         }
@@ -234,7 +236,7 @@ try {
     Write-TranscriptLine -Buffer $transcript -Text ("[bridge] connected to \\.\pipe\{0}" -f $PipeName)
     Write-Host ("[bridge] connected to \\.\pipe\{0}" -f $PipeName)
 
-    $startup = Drain-PipeOutput -Pipe $pipe -PromptTimeoutMs $PromptTimeoutMs -QuietDrainMs $QuietDrainMs -ConsoleLineBuffer $consoleLineBuffer
+    $startup = Drain-PipeOutput -Pipe $pipe -QuietDrainMs $QuietDrainMs -ConsoleLineBuffer $consoleLineBuffer -TraceDrain:$TraceDrain
     if ($startup.Text.Length -gt 0) {
         Write-TranscriptLine -Buffer $transcript -Text $startup.Text
     }
@@ -253,12 +255,21 @@ try {
         for ($index = 0; $index -lt $lines.Length; $index++) {
             $line = $lines[$index]
             Write-Host ("  line {0}/{1}" -f ($index + 1), $lines.Length)
+            $trimmed = $line.TrimStart()
+            if ([string]::IsNullOrWhiteSpace($line)) {
+                Write-Host "    [blank skipped]"
+                continue
+            }
+            if ($trimmed.StartsWith('\')) {
+                Write-Host "    [comment skipped]"
+                continue
+            }
             Send-Line -Pipe $pipe -Line $line
             if ($InterLineDelayMs -gt 0) {
                 Start-Sleep -Milliseconds $InterLineDelayMs
             }
 
-            $response = Drain-PipeOutput -Pipe $pipe -PromptTimeoutMs $PromptTimeoutMs -QuietDrainMs $QuietDrainMs -ConsoleLineBuffer $consoleLineBuffer -RequireXon
+            $response = Drain-PipeOutput -Pipe $pipe -QuietDrainMs $QuietDrainMs -ConsoleLineBuffer $consoleLineBuffer -RequireXon -TraceDrain:$TraceDrain
             if ($response.Text.Length -gt 0) {
                 Write-TranscriptLine -Buffer $transcript -Text $response.Text
             }
@@ -279,7 +290,7 @@ try {
         Write-TranscriptLine -Buffer $transcript -Text ""
         Write-TranscriptLine -Buffer $transcript -Text "=== WORDS ==="
         Send-Line -Pipe $pipe -Line "WORDS"
-        $probe = Drain-PipeOutput -Pipe $pipe -PromptTimeoutMs $PromptTimeoutMs -QuietDrainMs $QuietDrainMs -ConsoleLineBuffer $consoleLineBuffer -RequireXon
+        $probe = Drain-PipeOutput -Pipe $pipe -QuietDrainMs $QuietDrainMs -ConsoleLineBuffer $consoleLineBuffer -RequireXon -TraceDrain:$TraceDrain
         if ($probe.Text.Length -gt 0) {
             Write-TranscriptLine -Buffer $transcript -Text $probe.Text
         }

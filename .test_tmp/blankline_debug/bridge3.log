@@ -1,0 +1,107 @@
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0_34416_639142261488237847
+[bridge] firmware=C:\Users\Paul.Riley\PDR-16_XT\firmware\mega\pdr_vm\.build-legacy\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_34416_639142261488237847
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge] pipe=\\.\pipe\PDR16_XT_UART0_6312_639142261605328383
+[bridge] firmware=C:\Users\Paul.Riley\PDR-16_XT\firmware\mega\pdr_vm\.build-legacy\pdr_vm.ino.elf
+[bridge] waiting for Tera Term on \\.\pipe\PDR16_XT_UART0_6312_639142261605328383
+[bridge] Tera Term connected
+[bridge] avrsim starting
+[bridge:uart->host] 
+[bridge:host->uart] \ comment one
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] P
+[bridge:uart->host] D
+[bridge:uart->host] R
+[bridge:uart->host] -
+[bridge:uart->host] 1
+[bridge:uart->host] 6
+[bridge:uart->host] /
+[bridge:uart->host] X
+[bridge:uart->host] T
+[bridge:uart->host]  
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] v
+[bridge:uart->host] 4
+[bridge:uart->host] .
+[bridge:uart->host] 0
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] d
+[bridge:uart->host] e
+[bridge:uart->host] r
+[bridge:uart->host] i
+[bridge:uart->host] v
+[bridge:uart->host] e
+[bridge:uart->host] d
+[bridge:uart->host]  
+[bridge:uart->host] f
+[bridge:uart->host] r
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host]  
+[bridge:uart->host] e
+[bridge:uart->host] F
+[bridge:uart->host] o
+[bridge:uart->host] r
+[bridge:uart->host] t
+[bridge:uart->host] h
+[bridge:uart->host]  
+[bridge:uart->host] b
+[bridge:uart->host] y
+[bridge:uart->host]  
+[bridge:uart->host] C
+[bridge:uart->host] .
+[bridge:uart->host] H
+[bridge:uart->host] .
+[bridge:uart->host] T
+[bridge:uart->host] i
+[bridge:uart->host] n
+[bridge:uart->host] g
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] \
+[bridge:uart->host]  
+[bridge:uart->host] c
+[bridge:uart->host] o
+[bridge:uart->host] m
+[bridge:uart->host] m
+[bridge:uart->host] e
+[bridge:uart->host] n
+[bridge:uart->host] t
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] n
+[bridge:uart->host] e
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:host->uart] 
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge] XOFF from target
+[bridge] XON from target
+[bridge:uart->host]  
+[bridge:uart->host] o
+[bridge:uart->host] k
+[bridge:uart->host] 
+[bridge:uart->host] 
+[bridge:uart->host] 
